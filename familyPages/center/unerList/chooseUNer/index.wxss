@@ -1,0 +1,57 @@
+/* familyPages/chooseUNer/index.wxss */
+.page-wrap .body .group {
+  margin-bottom: 24rpx;
+  background-color: #ffffff;
+}
+.page-wrap .body .group .item {
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 37rpx;
+  border: 2rpx sold #ededed;
+  margin: 3rpx 0;
+  border-bottom: 1rpx solid #ededed;
+}
+.page-wrap .body .group .item .txt {
+  font-size: 32rpx;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+.page-wrap .body .group .item .txt .txt {
+  margin-left: 16rpx;
+}
+.page-wrap .btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 64rpx;
+  width: 100%;
+}
+.page-wrap .btn-wrap .btn-save {
+  margin-top: 48rpx;
+}
+.page-wrap .btn-wrap .van-button {
+  width: 580rpx;
+  height: 80rpx;
+  border-radius: 44rpx;
+}
+.page-wrap .body .group-empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page-wrap .body .group-empty image {
+  margin: 20rpx auto;
+  margin-top: 100rpx;
+  width: 80%;
+}
+.page-wrap .body .group-empty text {
+  text-align: center;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.page-wrap .btn-wrap .van-button {
+  margin-top: 20rpx;
+}

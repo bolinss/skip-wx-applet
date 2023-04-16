@@ -1,0 +1,170 @@
+/**index.wxss**/
+page {
+  height: 100%;
+}
+.page-wrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  .address-wrapper {
+    padding: 24rpx;
+    background-color: #fff;
+    .title {
+      font-size: 26rpx;
+      font-weight: 500;
+      color: #999999;
+      line-height: 64rpx;
+      margin-bottom: 10rpx;
+    }
+    .header {
+      display: flex;
+      margin-bottom: 20rpx;
+      justify-content: space-between;
+      .userinfo {
+        display: flex;
+        font-weight: 700;
+        .name {
+          margin-right: 24rpx;
+        }
+        .name,
+        .phone {
+          color: #333;
+          font-size: 30rpx;
+        }
+      }
+    }
+    .address {
+      font-size: 28rpx;
+      font-weight: 400;
+      color: #333333;
+      line-height: 32rpx;
+      margin-bottom: 12rpx;
+    }
+  }
+  .produce-detail {
+    display: flex;
+    padding: 24rpx;
+    background-color: #fff;
+    margin-top: 24rpx;
+    .img {
+      width: 136rpx;
+      height: 136rpx;
+      margin-right: 24rpx;
+    }
+    .info {
+      flex: 1;
+      .title {
+        font-size: 32rpx;
+        font-weight: 700;
+        color: #333333;
+        line-height: 45rpx;
+        margin-bottom: 10rpx;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 450rpx;
+      }
+      .price-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .price {
+          font-size: 36rpx;
+          font-weight: 500;
+          color: #ec5063;
+          line-height: 50rpx;
+          .money {
+            font-weight: 700;
+          }
+          .plus {
+            margin: 0 4rpx;
+          }
+          .unit {
+            margin-left: 4rpx;
+            font-size: 30rpx;
+          }
+        }
+        .num {
+          font-size: 26rpx;
+          font-weight: 400;
+          color: #999999;
+        }
+      }
+    }
+    .status {
+      font-size: 26rpx;
+      font-weight: 400;
+      color: #999999;
+      line-height: 37rpx;
+    }
+  }
+  .order-info {
+    padding: 24rpx;
+    margin-top: 24rpx;
+    background-color: #fff;
+    .title {
+      font-size: 26rpx;
+      font-weight: 500;
+      color: #999999;
+      line-height: 64rpx;
+      margin-bottom: 20rpx;
+    }
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 28rpx;
+      margin-bottom: 24rpx;
+      .label {
+        color: #666666;
+      }
+      &.real-price {
+        color: #ec5063;
+        .label {
+          color: #ec5063;
+        }
+      }
+    }
+  }
+  .logistics-info {
+    margin-top: 24rpx;
+    background-color: #fff;
+    .van-cell {
+      padding: 24rpx;
+    }
+  }
+  .promet {
+    width: 702rpx;
+    height: 80rpx;
+    background: #fff5d4;
+    border-radius: 8px;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #ffb400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 48rpx auto;
+    .van-icon {
+      margin-right: 16rpx;
+      font-size: 30rpx;
+    }
+  }
+  .btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 64rpx;
+    margin-top: 100rpx;
+    width: 100%;
+    .btn-cancel {
+      margin-right: 48rpx;
+      .van-button {
+        background: #e2e2e2;
+      }
+    }
+    .van-button {
+      width: 220rpx;
+      height: 80rpx;
+      border-radius: 44rpx;
+    }
+  }
+}

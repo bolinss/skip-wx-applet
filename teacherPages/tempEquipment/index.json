@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "临时设备",
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index"
+  }
+}

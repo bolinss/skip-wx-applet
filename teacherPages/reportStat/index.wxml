@@ -1,0 +1,10 @@
+<view class="reportStat">
+  <view class="report">
+    <image src="./images/report.png" mode="widthFix"></image>
+    <text>报表</text>
+  </view>
+  <view class="stat" bindtap="goStatistics">
+    <image src="./images/stat.png" mode="widthFix"></image>
+    <text>统计</text>
+  </view>
+</view>

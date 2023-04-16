@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "设备绑定",
+  "usingComponents": {
+    "selectBox": "../../components/public/select/index"
+  }
+}

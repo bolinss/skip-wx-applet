@@ -1,0 +1,244 @@
+/**index.wxss**/
+page {
+  height: 100%;
+}
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  .tabs-wrapper {
+    display: flex;
+    .tabs {
+      width: 646rpx;
+    }
+    .edit {
+      display: flex;
+      align-items: center;
+      width: 100rpx;
+      justify-content: center;
+      background-color: #fff;
+      font-size: 24rpx;
+    }
+  }
+  .collapse {
+    .van-collapse-item__title--expanded {
+      .van-cell__right-icon-wrap {
+        color: #498cff;
+      }
+    }
+    .van-collapse-item {
+      margin: 24rpx;
+      .van-cell {
+        border-radius: 8rpx;
+        padding: 29rpx 24rpx;
+        .van-cell__title {
+          font-size: 32rpx;
+          font-weight: 400;
+          color: #333333;
+        }
+      }
+    }
+    .userinfo {
+      .item {
+        font-size: 28rpx;
+        margin-bottom: 30rpx;
+        .value {
+          font-weight: 400;
+          color: #333333;
+          margin: 0 24rpx;
+        }
+        .change {
+          color: #498cff;
+        }
+      }
+    }
+    .collapse-title {
+      display: flex;
+      align-items: center;
+      .icon {
+        margin-right: 14rpx;
+        width: 24rpx;
+        height: 24rpx;
+      }
+    }
+  }
+  .deview-list {
+    .item {
+      padding: 24rpx;
+      background: #f6f9ff;
+      border-radius: 8px;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 24rpx;
+      .info {
+        flex: 1;
+        .title {
+          font-size: 30rpx;
+          font-weight: 500;
+          color: #333333;
+          display: flex;
+          justify-content: space-between;
+        }
+        .field {
+          font-size: 26rpx;
+          display: flex;
+          margin-top: 24rpx;
+          .label {
+            color: #999999;
+            margin-right: 24rpx;
+          }
+          .txt {
+            color: #333333;
+          }
+          .status {
+            .van-tag {
+              padding: 2rpx 10rpx;
+              border-radius: 14rpx;
+            }
+            .van-tag--success {
+              background: #a9ead3;
+              color: #47d99b;
+            }
+            .van-tag--danger {
+              background: #f4dfe8;
+              color: #ed596b;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .v1-wrap {
+    display: flex;
+    .item {
+      flex: 1;
+      text-align: left;
+      &:first-child {
+        text-align: left;
+        .num {
+          justify-content: flex-start;
+        }
+      }
+      .title {
+        font-size: 22rpx;
+        color: #666666;
+        line-height: 30px;
+      }
+      .num {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        .txt {
+          font-size: 3r6px;
+          font-weight: 700;
+          color: #333333;
+        }
+        .unit {
+          font-size: 20rpx;
+          font-weight: 500;
+          color: #999999;
+        }
+      }
+    }
+  }
+  .v1-table {
+    margin-top: 24rpx;
+    border-top: 1px solid #ededed;
+    .th {
+      display: flex;
+      padding: 24rpx 0;
+      .name {
+        font-size: 20rpx;
+        flex: 1;
+        font-weight: 400;
+        color: #999999;
+        &:last-child,
+        &.time,
+        &.point {
+          text-align: center;
+        }
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+    .td {
+      display: flex;
+      padding: 24rpx 0;
+      .value {
+        font-size: 24rpx;
+        flex: 1;
+        font-weight: 400;
+        color: #333333;
+        &:last-child,
+        &.time,
+        &.point {
+          text-align: center;
+        }
+        &:last-child {
+          text-align: right;
+        }
+        .self {
+          color: #498cff;
+        }
+        .other {
+          color: #333333;
+        }
+        &.time {
+          color: #9d9d9d;
+        }
+        &.SUCCESS {
+          color: #47d99b;
+        }
+      }
+    }
+  }
+  .honur-table {
+    margin-top: 24rpx;
+    border-top: 1px solid #ededed;
+    .th {
+      display: flex;
+      padding: 24rpx 0;
+      .name {
+        font-size: 20rpx;
+        flex: 1;
+        font-weight: 400;
+        color: #999999;
+        text-align: center;
+        &:first-child {
+          text-align: left;
+        }
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+    .td {
+      display: flex;
+      padding: 24rpx 0;
+      .value {
+        font-size: 24rpx;
+        flex: 1;
+        font-weight: 400;
+        color: #333333;
+        text-align: center;
+        &:first-child {
+          text-align: left;
+        }
+        &.time {
+          color: #999999;
+          text-align: right;
+        }
+        &.rank-1 {
+          color: #f1914a;
+        }
+        &.rank-2 {
+          color: #79abff;
+        }
+        &.rank-3 {
+          color: #47d99b;
+        }
+      }
+    }
+  }
+}

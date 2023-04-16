@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "Uner列表",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "van-tag": "@vant/weapp/tag/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  }
+}

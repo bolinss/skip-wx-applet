@@ -1,0 +1,14 @@
+<view class="page-wrap">
+  <view class="form-wrap">
+    <van-cell-group>
+      <van-field label="手机号" model:value="{{ phoneNumber }}" placeholder="请输入" border="{{ false }}" bind:change="onChange" />
+      <van-field model:value="{{ code }}" center clearable label="短信验证码" placeholder="请输入短信验证码" border="{{ false }}" use-button-slot>
+        <van-button slot="button" size="small" type="default" bindtap="sendCode">发送验证码</van-button>
+      </van-field>
+    </van-cell-group>
+    <view class="promet">{{text}}</view>
+  </view>
+  <view class="btn-wrap">
+    <van-button type="info" class="primary-btn" bindtap="changePhone">确认修改</van-button>
+  </view>
+</view>

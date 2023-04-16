@@ -1,0 +1,30 @@
+/**index.wxss**/
+page {
+  height: 100%;
+}
+page .page-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+page .page-wrap .form-wrap {
+  flex: 1;
+}
+page .page-wrap .btn-wrap {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 64rpx;
+  width: 100%;
+}
+page .page-wrap .btn-wrap .btn-cancel {
+  margin-right: 48rpx;
+}
+page .page-wrap .btn-wrap .btn-cancel .van-button {
+  background: #e2e2e2;
+}
+page .page-wrap .btn-wrap .van-button {
+  width: 220rpx;
+  height: 80rpx;
+  border-radius: 44rpx;
+}

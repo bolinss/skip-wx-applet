@@ -1,0 +1,26 @@
+<view class="page-wrap">
+  <view class="form-wrap">
+    <van-cell-group>
+      <van-field label="姓名" input-align="right" model:value="{{ name }}" placeholder="请输入" border="{{ false }}" />
+      <van-field label="证件号" input-align="right" model:value="{{ idCard }}" placeholder="请输入" border="{{ false }}" />
+      <van-cell title="性别" data-key="gender" is-link value="{{ gender === 1 ? '男': '女' }}" bind:click="pickerShowChange" />
+      <van-cell title="出生日期" is-link value="{{ dateOfBirthName }}" bind:click="onShowCalendar" />
+      <van-cell title="学校" data-key="sysSchoolInfoId" is-link value="{{ sysSchoolInfoName }}" bind:click="pickerShowChange" />
+      <van-field label="身高" input-align="right" model:value="{{ height }}" placeholder="请输入" border="{{ false }}" />
+      <van-field label="体重" input-align="right" model:value="{{ weight }}" placeholder="请输入" border="{{ false }}" />
+    </van-cell-group>
+  </view>
+  <van-action-sheet show="{{ showCalendar }}" bind:click-overlay="onCancelCalendar">
+    <van-datetime-picker type="date" value="{{ dateOfBirth }}" bind:cancel="onCancelCalendar" bind:confirm="onConfirmCalendar" min-date="{{ minDate }}" />
+  </van-action-sheet>
+  <van-action-sheet show="{{ pickerShow }}" bind:click-overlay="onPickerCancel">
+    <van-picker show-toolbar bind:cancel="onPickerCancel" bind:confirm="onPickerConfirm" columns="{{ pickerList }}" bind:confirm="onPickerConfirm" />
+  </van-action-sheet>
+  <view class="btn-wrap">
+    <van-button type="defalut" wx:if="{{sysUnerId}}" class="btn-cancel" bindtap="delete">
+      删除
+    </van-button>
+    <van-button type="info" bindtap="submit">保存</van-button>
+  </view>
+  <van-dialog id="van-dialog-del" />
+</view>

@@ -1,0 +1,68 @@
+/**index.wxss**/
+page {
+  height: 100%;
+}
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.page-wrap .list {
+  flex: 1;
+}
+.page-wrap .list .item {
+  background-color: #fff;
+  margin-bottom: 24rpx;
+  padding: 20rpx 24rpx;
+}
+.page-wrap .list .item .header {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.page-wrap .list .item .header .name {
+  margin-right: 24rpx;
+}
+.page-wrap .list .item .header .name,
+.page-wrap .list .item .header .phone {
+  color: #333;
+  font-size: 40rpx;
+}
+.page-wrap .list .item .address {
+  height: 64rpx;
+  width: 100%;
+  margin-bottom: 48rpx;
+}
+.page-wrap .list .item .handle {
+  display: flex;
+  justify-content: space-between;
+}
+.page-wrap .list .item .handle .default {
+  align-items: center;
+  font-size: 26rpx;
+}
+.page-wrap .list .item .handle .btn {
+  display: flex;
+}
+.page-wrap .list .item .handle .btn .edit,
+.page-wrap .list .item .handle .btn .del {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+}
+.page-wrap .list .item .handle .btn .edit {
+  margin-right: 24rpx;
+}
+.page-wrap .btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48rpx 86rpx;
+  width: 100%;
+}
+.page-wrap .btn-wrap .btn-save {
+  margin-top: 48rpx;
+}
+.page-wrap .btn-wrap .van-button {
+  width: 580rpx;
+  height: 80rpx;
+  border-radius: 44rpx;
+}

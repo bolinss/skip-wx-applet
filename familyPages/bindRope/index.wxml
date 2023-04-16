@@ -1,0 +1,19 @@
+<view class="smartRope">
+  <view class="aline" style="border-bottom:1px solid #ebedf0;">
+    <view class="name">uner</view>
+    <view class="value" style="margin-right:-20rpx;">
+      <selectBox title="点击选择uner" columns="{{columns}}" bind:sendSelectData="getSelectData"></selectBox>
+    </view>
+  </view>
+  <view class="title">请输入跳绳上的随机码:</view>
+  <view class="input">
+    <view class="input-item" wx:for="{{6}}" wx:key="index" data-index="{{index}}">
+      <view class="input-value">{{password[index]}}</view>
+      <view class="focus {{index === focusIndex ? 'show': 'hide'}}"></view>
+    </view>
+    <input class="input-number" maxlength="6" value="{{password}}" bindinput="setValue" bindblur="inputBlur" type="number"
+      focus="{{focus}}"></input>
+  </view>
+  <view class="tips">在跳绳内，进入设备绑定处屏幕上会出现随机的6位验证码。将验证码输入在上方输入框内即可完成绑定</view>
+  <view class="df_btn" bindtap="submitCode">确认</view>
+</view>

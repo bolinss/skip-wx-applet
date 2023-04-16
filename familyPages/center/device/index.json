@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "设备管理",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-picker": "@vant/weapp/picker/index"
+  }
+}

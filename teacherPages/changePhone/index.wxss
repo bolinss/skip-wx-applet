@@ -1,0 +1,18 @@
+/**index.wxss**/
+page {
+  height: 100%;
+}
+page .page-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+page .page-wrap .form-wrap {
+  flex: 1;
+}
+page .page-wrap .promet {
+  margin: 24rpx;
+}
+page .page-wrap .btn-wrap {
+  padding: 48rpx 86rpx;
+}

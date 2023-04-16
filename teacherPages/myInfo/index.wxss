@@ -1,0 +1,57 @@
+.myInfo .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 26rpx 45rpx;
+  background-color: #fff;
+}
+.myInfo .header .userinfo {
+  display: flex;
+}
+.myInfo .header .userinfo .avatar {
+  width: 126rpx;
+  height: 126rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.myInfo .header .userinfo .name {
+  height: 100%;
+}
+.myInfo .header .userinfo .name .txt {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #333;
+  margin: 20rpx 0 10rpx;
+}
+.myInfo .header .userinfo .name .id {
+  font-size: 28rpx;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 0.5);
+}
+.myInfo .header .icon {
+  color: #ffffff;
+}
+.myInfo .content {
+  margin-top: 20rpx;
+}
+.myInfo .content .line {
+  background-color: #fff;
+  padding: 30rpx ;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.myInfo .content .line .name {
+  margin-right: 10rpx;
+}
+.myInfo .content .line .value {
+  flex: 1;
+  text-align: right;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.myInfo .content .line .value text {
+  margin-right: 20rpx;
+  color: #bbb;
+}

@@ -1,0 +1,43 @@
+page {
+  background-color: #fff;
+}
+.login .logo {
+  width: 188rpx;
+  height: auto;
+  display: block;
+  margin: 200rpx auto;
+}
+.btnBox {
+  padding: 0 80rpx;
+}
+.btnBox .btn {
+  width: 100%;
+  height: 84rpx;
+  line-height: 84rpx;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: #333;
+  border-radius: 84rpx;
+  font-size: 30rpx;
+}
+.btnBox .btn2 {
+  margin-top: 36rpx;
+  background-color: #0abc62;
+  color: #fff;
+}
+.agreementText {
+  padding: 0 50rpx;
+  position: fixed;
+  bottom: 48rpx;
+  left: 0;
+  display: flex;
+}
+.agreementText .textBox {
+  flex: 1;
+  padding-left: 10rpx;
+  font-size: 24rpx;
+  line-height: 36rpx;
+}
+.agreementText .textBox text {
+  color: #498cff;
+}

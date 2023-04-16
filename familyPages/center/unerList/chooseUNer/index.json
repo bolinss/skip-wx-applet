@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "white"
+  },
+  "navigationBarTitleText": "选择UNer",
+  "usingComponents": {
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-radio": "@vant/weapp/radio/index"
+  }
+}

@@ -1,0 +1,65 @@
+.myInfo {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 26rpx 45rpx;
+    background-color: #fff;
+
+    .userinfo {
+      display: flex;
+
+      .avatar {
+        width: 126rpx;
+        height: 126rpx;
+        border-radius: 50%;
+        margin-right: 20rpx;
+      }
+
+      .name {
+        height: 100%;
+
+        .txt {
+          font-size: 30rpx;
+          font-weight: 500;
+          color: #333;
+          margin: 20rpx 0 10rpx;
+        }
+
+        .id {
+          font-size: 28rpx;
+          font-weight: 400;
+          color: rgba(51, 51, 51, 0.5);
+        }
+      }
+    }
+
+    .icon {
+      color: #ffffff;
+    }
+  }
+  .content{
+    margin-top:20rpx;
+    .line{
+      background-color: #fff;
+      padding: 30rpx ;
+      display: flex;
+      align-items: center;
+      border-bottom:1px solid #eee;
+      .name{
+        margin-right: 10rpx;
+      }
+      .value{
+        flex:1;
+        text-align: right;
+        color:#333;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text{
+          margin-right: 20rpx;
+          color:#bbb;
+        }
+      }
+    }
+  }
+}

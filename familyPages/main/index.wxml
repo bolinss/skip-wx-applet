@@ -1,0 +1,7 @@
+<view class="main">
+  <home wx:if="{{showPage == 'home'}}"></home>
+  <mall wx:if="{{showPage == 'mall'}}"></mall>
+  <train wx:if="{{showPage == 'train'}}"></train>
+  <mine wx:if="{{showPage == 'mine'}}" bind:goPage="goPage"></mine>
+  <tabbar edition="{{0}}" bind:showPage="showPage"></tabbar>
+</view>

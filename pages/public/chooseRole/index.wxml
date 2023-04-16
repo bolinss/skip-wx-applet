@@ -1,0 +1,7 @@
+<view class="login">
+  <image src="../../../static/public/images/logo.png" mode="widthFix" class="logo"></image>
+  <view class="btnBox">
+    <view class="btn" bindtap="onGotoTeacherPage">打开教师端</view>
+    <view class="btn btn2" bindtap="onGotoFamilyPage">打开家长端</view>
+  </view>
+</view>

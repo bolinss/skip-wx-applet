@@ -1,0 +1,25 @@
+<!-- 
+  <selectTime title="点击选择籍贯" dateType="time" value="{{aaa}}" bind:sendTimeData="getTimeData" minDate="{{minDate}}"></selectTime>
+  1.title为初始化显示内容
+  2.getTimeData为确定选择后回调
+  3.dateType为选择的日期类型（date、time、datetime），默认date
+  4.value为默认显示时间，不填显示title
+  5.minDate为最小选择时间，不填默认为2020-01-01
+-->
+<view class="selectBox">
+  <view class="selectText" bindtap="showColumn">
+    <text class="text">{{title}}</text>
+    <van-icon name="arrow-down" />
+  </view>
+  <van-popup show="{{ showSelect }}" position="bottom">
+    <van-datetime-picker
+      min-date="{{ minDate }}"
+      type="{{dateType}}"
+      value="{{ currentDate }}"
+      bind:input="onInput"
+      formatter="{{ formatter }}"
+      bind:confirm="onConfirm"
+      bind:cancel="onCancel"
+    />
+  </van-popup>
+</view>

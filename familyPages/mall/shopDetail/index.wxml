@@ -1,0 +1,27 @@
+<view class="page-wrap">
+  <view class="header">
+    <image class="img" src="{{detail.productPictureLink}}"></image>
+    <view class="info">
+      <view class="title">
+        <text class="txt">{{detail.productTitle}}</text>
+        <text class="you">包邮</text>
+      </view>
+      <view class="price-info">
+        <view class="price">
+          <text class="money">{{detail.integralPrice}}</text>
+          <text class="unit">积分</text>
+          <text class="plus">+</text>
+          <text class="money">{{detail.price}}</text>
+          <text class="unit">元</text>
+        </view>
+        <view class="num">已兑换{{item.hasSold || 0}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="introduction">
+    <rich-text nodes="{{detail.productIntroduction}}"></rich-text>
+  </view>
+  <view class="btn-wrap">
+    <van-button type="info" bindtap="submit">立即兑换</van-button>
+  </view>
+</view>

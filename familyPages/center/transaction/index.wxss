@@ -1,0 +1,97 @@
+/**index.wxss**/
+page {
+  height: 100%;
+}
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 24rpx;
+}
+.page-wrap .tabs {
+  margin-bottom: 24rpx;
+  display: flex;
+}
+.page-wrap .tabs .tab {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: #fff;
+  padding: 27rpx 0 34rpx 0;
+  flex-direction: column;
+}
+.page-wrap .tabs .tab.active {
+  border-top: 4rpx solid #498cff;
+}
+.page-wrap .tabs .tab.active .text {
+  color: #333333;
+  font-weight: 700;
+}
+.page-wrap .tabs .tab.active .num {
+  color: #498cff;
+  font-weight: 700;
+}
+.page-wrap .tabs .tab .text {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: #999999;
+  line-height: 32rpx;
+  margin-bottom: 15rpx;
+}
+.page-wrap .tabs .tab .num {
+  font-size: 48rpx;
+  font-weight: 400;
+  color: #666666;
+  line-height: 48rpx;
+}
+.page-wrap .list-wrap {
+  background-color: #fff;
+  padding: 37rpx 24rpx;
+}
+.page-wrap .list-wrap .header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-wrap .list-wrap .header-wrap .header {
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #333333;
+}
+.page-wrap .list-wrap .header-wrap .header .num {
+  color: #498cff;
+}
+.page-wrap .list-wrap .header-wrap .header .exchange {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #666666;
+}
+.page-wrap .list-wrap .list .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 33rpx 0;
+  border-bottom: 1px solid #e4e4e4;
+}
+.page-wrap .list-wrap .list .item .num {
+  color: #498cff;
+}
+.page-wrap .list-wrap .list .item .num-1 {
+  color: #333333;
+}
+.page-wrap .list-wrap .list .item .detail .title {
+  font-size: 28prx;
+  font-weight: 400;
+  margin-bottom: 15rpx;
+  color: #333333;
+}
+.page-wrap .list-wrap .list .item .detail .time {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #999999;
+}
+.page-wrap .list-wrap .list .more {
+  text-align: center;
+  margin-top: 24rpx;
+  color: #999;
+}

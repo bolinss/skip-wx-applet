@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "跳绳计时",
+  "usingComponents": {
+    "ec-canvas": "../ec-canvas/ec-canvas",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-tab": "@vant/weapp/tab/index"
+  }
+}

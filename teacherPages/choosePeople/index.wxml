@@ -1,0 +1,18 @@
+<view class="choosePeople">
+	<van-search value="{{ value }}" placeholder="搜索学生姓名" background="#fff" bind:change="onSearch" />
+  <view class="content" wx:if="{{memberUNerList && memberUNerList.length != 0}}">
+    <view class="line" wx:for="{{memberUNerList}}" wx:key="sysUnerId" bindtap="changeChecked" data-opt="{{index}}">
+      <van-checkbox value="{{ item.checked }}" icon-size="16px"></van-checkbox>
+      <image src="{{item.avatarUrl?item.avatarUrl:'./image/avatar.png'}}" style="width:80rpx;height:80rpx;" class="head"></image>
+      <view class="name">{{item.name}}</view>
+    </view>
+  </view>
+  <view wx:else class="noData">暂无数据</view>
+  <view class="submitBox">
+    <van-checkbox value="{{ allChecked }}" bind:change="onCheckedChange" icon-size="16px">全选</van-checkbox>
+    <view class="btnBox">
+      <view class="btn" bindtap="goBack">取消</view>
+      <view class="btn btn1" bindtap="submitStudents">确认</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+<view class="page-wrap">
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:key="index">
+      <view class="avatar">
+        <image class="img" src="{{item.userAvatarUrl}}"></image>
+      </view>
+      <view class="userinfo">
+        <view class="header">
+          <text class="name">{{item.userNickName}}</text>
+          <view class="status">
+            <van-tag round type="{{item.relationState === 'NOT_AUTH'? 'danger' : 'success'}}">
+              {{item.relationState === 'NOT_AUTH' ? '未授权' : '已授权'}}
+            </van-tag>
+          </view>
+        </view>
+        <view class="phone">手机号: {{item.userPhone}}</view>
+      </view>
+      <view class="btn btn-unauth" wx:if="{{item.relationState === 'NOT_AUTH'}}" data-id="{{item.sysAppletUserId}}" bindtap="confirmlAuth">
+        确认授权
+      </view>
+      <view class="btn" wx:else bindtap="cancelAuth" data-id="{{item.sysAppletUserId}}">取消授权</view>
+    </view>
+    <!-- <view class="item">
+      <view class="avatar">
+        <image class="img" src="../../index/images/avatar.png"></image>
+      </view>
+      <view class="userinfo">
+        <view class="header">
+          <text class="name">李凯</text>
+          <view class="status">
+            <van-tag round type="danger">xx</van-tag>
+          </view>
+        </view>
+        <view class="phone">手机号: 15882729843</view>
+      </view>
+      <view class="btn btn-unauth" wx:if="{{item.relationState === 'NOT_AUTH'}}" bindtap="cancelAuth">
+        确认授权
+      </view>
+      <view class="btn" wx:else bindtap="cancelAuth">取消授权</view>
+    </view> -->
+  </view>
+  <van-dialog id="van-dialog-del" />
+  <view class="btn-wrap">
+    <van-button type="info" bindtap="goPage">我的授权码</van-button>
+  </view>
+</view>

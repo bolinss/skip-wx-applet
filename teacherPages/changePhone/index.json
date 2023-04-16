@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "更改手机号",
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index"
+  }
+}

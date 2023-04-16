@@ -1,0 +1,30 @@
+<!-- familyPages/chooseUNer/index.wxml -->
+<view class="page-wrap">
+  <view class="body">
+    <view class="group">
+      <van-radio-group value="{{ selectedSysUNerId }}" bind:change="onSelectChange">
+        <view class="item" wx:for="{{unerList}}" wx:key="sysUnerId" bindtap="onSelectedSysUNerId" data-sysunerid="{{item.sysUnerId}}">
+          <view class="txt">
+            <van-radio name="{{item.sysUnerId}}"></van-radio>
+            <text class="txt">{{item.name}}</text>
+          </view>
+          <!-- <view class="name" data-key="{{item.sysUnerId}}">
+            <van-icon class="icon" name="arrow" />
+          </view> -->
+        </view>
+      </van-radio-group>
+    </view>
+    <view wx:if="{{unerListEmptyFlag}}" class="group-empty">
+      <image src="/static/public/images/empty.png" />
+      <text>暂无数据</text>
+    </view>
+  </view>
+  <view class="btn-wrap">
+    <van-button wx:if="{{!unerListEmptyFlag}}" class="btn btn-save" type="info" bindtap="doSubmit">
+      确认
+    </van-button>
+    <van-button class="btn" type="{{ unerListEmptyFlag ? 'info' : 'text' }}" bindtap="gotoAddUNerPage">
+      添加UNer
+    </van-button>
+  </view>
+</view>

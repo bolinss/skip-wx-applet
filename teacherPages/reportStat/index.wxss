@@ -1,0 +1,40 @@
+.reportStat {
+  overflow: hidden;
+  font-size: 38rpx;
+  color: #fff;
+  padding-top: 20rpx;
+}
+.reportStat .report {
+  width: 355rpx;
+  float: left;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 14rpx;
+}
+.reportStat .report image {
+  width: 355rpx;
+}
+.reportStat .report text {
+  position: absolute;
+  top: 24rpx;
+  left: 40rpx;
+}
+.reportStat .stat {
+  width: 355rpx;
+  float: left;
+  margin-left: 14rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reportStat .stat image {
+  width: 355rpx;
+}
+.reportStat .stat text {
+  position: absolute;
+  top: 24rpx;
+  left: 40rpx;
+}

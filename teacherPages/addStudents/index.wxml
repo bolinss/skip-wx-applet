@@ -1,0 +1,8 @@
+<view class="addClass">
+  <view style="border-bottom:1px solid #eee;">
+    <van-field model:value="{{studentsName}}" clearable label="学生姓名" input-align="right" placeholder="请输入学生姓名" />
+    <van-field model:value="{{studentsCode}}" clearable label="证件号" input-align="right" placeholder="请输入学生证件号" />
+  </view>
+  <view class="df_btn" bindtap="addStudents">确定添加</view>
+  <view class="btn_text" bindtap="goClassCode">创建班级二维码</view>
+</view>

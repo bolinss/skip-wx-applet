@@ -1,0 +1,20 @@
+<view class="deviceManage">
+  <view class="content" wx:if="{{deviceData && deviceData.length != 0}}">
+    <view class="box" wx:for="{{deviceData}}" wx:key="sysSkipDeviceId">
+      <view class="title">设备型号：{{item.skipDevice.deviceModel}}</view>
+      <view class="line">
+        <view class="name">设备编码</view>
+        <view class="value">{{item.skipDevice.deviceSerialNumber}}</view>
+      </view>
+      <view class="line">
+        <view class="name">设备状态</view>
+        <view class="value">
+          <view class="btn1 {{item.skipDevice.deviceActivationState=='USED_FORMALLY'?'btn2':''}}">{{item.skipDevice.deviceActivationState=='NOT_ACTIVATED'?'未激活':item.skipDevice.deviceActivationState=='USED_FORMALLY'?'正式使用':'临时使用'}}</view>
+        </view>
+        <view class="btn_delete" bindtap="deleteDevice" data-opt="{{item.sysSkipDeviceRefTeacherId}}">删除设备</view>
+      </view>
+    </view>
+  </view>
+  <view class="noData" wx:else>暂无设备</view>
+  <view class="df_btn" bindtap="scanCode">添加设备</view>
+</view>

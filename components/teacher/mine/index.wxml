@@ -1,0 +1,32 @@
+<view class="page-wrap">
+  <view class="header" bindtap="goPage" data-page="/teacherPages/myInfo/index">
+    <view class="userinfo">
+      <image round class="avatar" src="{{myinfo.userAvatarUrl}}" />
+      <view class="name">
+        <view class="txt">{{myinfo.userNickName}}</view>
+        <view class="id">ID：{{myinfo.certificateNo}}</view>
+      </view>
+    </view>
+    <van-icon data-type="userInfo" class="icon" name="arrow" />
+  </view>
+  <view class="body">
+    <view class="group" bindtap="goPage" data-page="/teacherPages/deviceManage/index">
+      <view class="item" data-type="device">
+        <view class="txt">设备管理</view>
+        <van-icon class="icon" name="arrow" color="#ccc" />
+      </view>
+    </view>
+    <view class="group" bindtap="goPage" data-page="/teacherPages/policy/index">
+      <view class="item">
+        <view class="txt">条款政策</view>
+        <van-icon class="icon" name="arrow" color="#ccc" />
+      </view>
+    </view>
+    <view class="group">
+      <view class="item">
+        <view class="txt">帮助中心</view>
+        <van-icon class="icon" name="arrow" color="#ccc" />
+      </view>
+    </view>
+  </view>
+</view>

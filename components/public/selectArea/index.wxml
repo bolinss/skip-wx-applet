@@ -1,0 +1,19 @@
+<!-- 
+  <selectArea title="点击选择籍贯" bind:sendAreaData="getAreaData"></selectArea>
+  1.title为初始化显示内容
+  2.getAreaData为确定选择后回调
+-->
+<view class="selectBox">
+  <view class="selectText" bindtap="showColumn">
+    <text class="text">{{titleText}}</text>
+    <van-icon name="arrow-down" />
+  </view>
+  <van-popup show="{{ showSelect }}" position="bottom">
+    <van-area 
+    area-list="{{ areaList }}"
+    value="{{defaultData}}"
+    columns-num="{{ 2 }}"
+    bind:cancel="onCancel" 
+    bind:confirm="onConfirm" />
+  </van-popup>
+</view>

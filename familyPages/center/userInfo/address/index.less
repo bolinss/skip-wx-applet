@@ -1,0 +1,68 @@
+/**index.wxss**/
+page {
+  height: 100%;
+}
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  .list {
+    flex: 1;
+    .item {
+      background-color: #fff;
+      margin-bottom: 24rpx;
+      padding: 20rpx 24rpx;
+      .header {
+        display: flex;
+        margin-bottom: 20rpx;
+        .name {
+          margin-right: 24rpx;
+        }
+        .name,
+        .phone {
+          color: #333;
+          font-size: 40rpx;
+        }
+      }
+      .address {
+        height: 64rpx;
+        width: 100%;
+        margin-bottom: 48rpx;
+      }
+      .handle {
+        display: flex;
+        justify-content: space-between;
+        .default {
+          align-items: center;
+          font-size: 26rpx;
+        }
+        .btn {
+          .edit,
+          .del {
+            display: flex;
+            align-items: center;
+            font-size: 26rpx;
+          }
+          .edit {
+            margin-right: 24rpx;
+          }
+          display: flex;
+        }
+      }
+    }
+  }
+  .btn-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48rpx 86rpx;
+    width: 100%;
+    .btn-save {
+      margin-top: 48rpx;
+    }
+    .van-button {
+      width: 580rpx;
+      height: 80rpx;
+      border-radius: 44rpx;
+    }
+  }
+}

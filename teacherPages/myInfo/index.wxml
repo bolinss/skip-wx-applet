@@ -1,0 +1,42 @@
+<view class="myInfo">
+  <view class="header">
+    <view class="userinfo">
+      <image round class="avatar" src="{{myinfo.userAvatarUrl}}" />
+      <view class="name">
+        <view class="txt">{{myinfo.userNickName}}</view>
+        <view class="id">ID：{{myinfo.certificateNo}}</view>
+      </view>
+    </view>
+    <van-icon bindtap="go" data-type="userInfo" class="icon" name="arrow" />
+  </view>
+  <view class="content">
+    <view class="line">
+      <view class="name">真实姓名</view>
+      <view class="value">{{myinfo.realName}}</view>
+    </view>
+    <view class="line">
+      <view class="name">教师资格证编号</view>
+      <view class="value">{{myinfo.certificateNo}}</view>
+    </view>
+    <view class="line">
+      <view class="name">任职学校</view>
+      <view class="value">{{myinfo.sysSchoolInfo.schoolName}}</view>
+    </view>
+    <view class="line" bindtap="goClassManage">
+      <view class="name">班级管理</view>
+      <view class="value" bindtap="goChoosePeople">
+        <!-- <text>请选择</text> -->
+        <van-icon name="arrow" style="color:#bbb" />
+      </view>
+    </view>
+  </view>
+  <view class="content">
+    <view class="line" bindtap="goChangePhone">
+      <view class="name">手机号</view>
+      <view class="value" bindtap="goChoosePeople">
+        <text>{{myinfo.teacherPhone}}</text>
+        <van-icon name="arrow" style="color:#bbb" />
+      </view>
+    </view>
+  </view>
+</view>

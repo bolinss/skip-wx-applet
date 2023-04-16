@@ -1,0 +1,36 @@
+<view class="page-wrap">
+  <view class="content">
+    <view class="header">
+      <view class="userinfo">
+        <image round class="avatar" src="{{user.userAvatarUrl}}" />
+        <view class="name">
+          <view class="txt">{{user.userNickName}}</view>
+          <view class="id">ID:{{user.sysAppletUserId}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="body">
+      <view class="group">
+        <view class="item" bindtap="go" data-type="phone">
+          <view class="txt">手机号</view>
+          <van-icon class="icon" name="arrow" />
+        </view>
+      </view>
+      <view class="group">
+        <view class="item" bindtap="go" data-type="address">
+          <view class="txt">地址管理</view>
+          <van-icon class="icon" name="arrow" />
+        </view>
+      </view>
+      <view class="group">
+        <view class="item">
+          <view class="txt">邀请码</view>
+          <view>{{code}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="btn-wrap">
+    <van-button type="default" class="primary-btn">退出登录</van-button>
+  </view>
+</view>

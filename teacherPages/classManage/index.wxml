@@ -1,0 +1,14 @@
+<view class="classManage">
+  <!-- <van-search value="{{ searchVal }}" placeholder="搜索班级名称" background="#fff" bind:change="onSearch" /> -->
+  <view class="content" wx:if="{{classData && classData.length != 0}}">
+    <view class="line" bindtap="goClassDetails" wx:for="{{classData}}" wx:key="sysSchoolClassInfoId" data-opt="{{item}}">
+      <view class="name">{{item.schoolClassName}}</view>
+      <view class="btn"><van-icon name="arrow" /></view>
+    </view>
+  </view>
+  <view class="noData" wx:else>
+    <image src="./images/noClass.png" style="width:520rpx;height:auto;" mode="widthFix"></image>
+    <view class="text">无班级信息</view>
+  </view>
+  <view class="df_btn" bindtap="addClass">添加班级</view>
+</view>

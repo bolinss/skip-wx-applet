@@ -1,0 +1,26 @@
+<view class="taskList">
+  <view class="tabBox">
+    <view class="tab {{tabbar == 0?'on':''}}" bindtap="changeTabbar" data-opt="0">已发布</view>
+    <view class="tab {{tabbar == 1?'on':''}}" bindtap="changeTabbar" data-opt="1">草稿箱</view>
+  </view>
+  <view class="content" wx:if="{{listData && listData.length != 0}}">
+    <view class="box" wx:for="{{listData}}" wx:key="sysSkipTeacherTaskId">
+      <view class="titleBox">
+        <view class="title">任务名称：{{item.taskName}}</view>
+        <view class="status {{item.taskState=='PROGRESS'?'c_blue':item.taskState=='ENDED'?'c_grey':item.taskState=='FAILED'?'c_grey':''}}" wx:if="{{tabbar == 0}}">{{item.taskState=='MATCHING'?'匹配中':item.taskState=='INITIAL'?'未开始':item.taskState=='PROGRESS'?'进行中':item.taskState=='ENDED'?'已结束':'匹配失败'}}</view>
+        <view class="optBox" wx:if="{{tabbar == 1}}">
+          <view class="btn" bindtap="goEdit" data-opt="{{item}}">
+            <van-icon name="records" size="30rpx" />
+            <text>编辑</text>
+          </view>
+          <view class="btn" bindtap="deleteDraft" data-opt="{{item}}">
+            <van-icon name="delete-o" size="30rpx" />
+            <text>删除</text>
+          </view>
+        </view>
+      </view>
+      <view class="timeBox" wx:if="{{item.taskStartTime}}">{{item.taskStartTime?item.taskStartTime:'暂无创建时间'}}</view>
+    </view>
+  </view>
+  <view class="noData" wx:else>暂无数据</view>
+</view>

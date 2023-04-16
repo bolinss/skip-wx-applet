@@ -1,0 +1,13 @@
+<!-- 
+  <choiceTag tagBox="{{tagBox}}" defaultData="{{defaultData}}" isSingle="{{false}}" maxlength="2" bind:setTagData="getTagData"></choiceTag>
+  1.tagBox为列表数据，里面需要有tag_name字段
+  2.isSingle字段true为单选，false为多选，默认单选
+  3.getTagData为选择后回调
+  4.maxlength为在多选状态下，最多选择个数，默认不限制个数
+  5.defaultData为默认选中数据，用逗号分隔
+-->
+<view class="tagBox">
+	<view wx:for="{{tagBox}}" wx:for-index="index" data-item="{{item}}" wx:key="tag_name" class="tag {{item.checked?'on':''}}" bindtap="choiceTag" data-index="{{index}}" data-checked="{{item.checked}}">
+		<text>{{item.tag_name}}</text>
+	</view>
+</view>

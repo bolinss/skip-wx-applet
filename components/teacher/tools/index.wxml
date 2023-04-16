@@ -1,0 +1,20 @@
+<view class="tool">
+  <view class="content">
+    <view class="itemBox" bindtap="goPage" data-page="/teacherPages/createTask/index">
+      <image src="../../../static/teacher/tool1.png" style="width:120rpx;height:120rpx;"></image>
+      <view class="name">任务创建</view>
+    </view>
+    <view class="itemBox" bindtap="goPage" data-page="/teacherPages/taskList/index">
+      <image src="../../../static/teacher/tool2.png" style="width:120rpx;height:120rpx;"></image>
+      <view class="name">历史任务</view>
+    </view>
+    <view class="itemBox" bindtap="goPage" data-page="/teacherPages/reportStat/index">
+      <image src="../../../static/teacher/tool3.png" style="width:120rpx;height:120rpx;"></image>
+      <view class="name">报表生成</view>
+    </view>
+    <view class="itemBox" bindtap="goPage" data-page="/teacherPages/classManage/index">
+      <image src="../../../static/teacher/tool1.png" style="width:120rpx;height:120rpx;"></image>
+      <view class="name">班级管理</view>
+    </view>
+  </view>
+</view>

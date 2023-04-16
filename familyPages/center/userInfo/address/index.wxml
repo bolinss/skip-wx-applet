@@ -1,0 +1,36 @@
+<view class="page-wrap">
+  <view class="list">
+    <van-radio-group value="{{ selectedAddress }}" bind:change="selectChange">
+      <view class="item" wx:for="{{list}}" wx:key="sysConsigneeAddressId">
+        <view class="header">
+          <view class="name">{{item.realName}}</view>
+          <view class="phone">{{item.contact}}</view>
+        </view>
+        <view class="address">
+          {{item.addressProvince}}{{item.addressDistrict}} {{item.addressCity}} {{item.addressDetailed}}
+        </view>
+        <view class="handle">
+          <view class="defalut">
+            <van-radio name="{{item.sysConsigneeAddressId}}">{{orderId ? '选中' : '设为默认'}}</van-radio>
+          </view>
+          <view class="btn">
+            <view class="edit" data-pos="{{index}}" bindtap="goDetail">
+              <van-icon name="edit" />
+              编辑
+            </view>
+            <view class="del" data-id="{{item.sysConsigneeAddressId}}" bindtap="delete">
+              <van-icon name="delete" />
+              删除
+            </view>
+          </view>
+        </view>
+      </view>
+    </van-radio-group>
+    <van-dialog id="van-dialog" />
+  </view>
+  <view class="btn-wrap">
+    <van-button type="info" bindtap="goDetail">增加地址</van-button>
+    <!-- <van-button class="btn-save" wx:if="{{orderId}}" type="info" bindtap="goDetail">保存</van-button>
+    <van-button type="{{orderId ? 'text' : 'info'}}" bindtap="goDetail">增加地址</van-button> -->
+  </view>
+</view>

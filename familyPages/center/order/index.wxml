@@ -1,0 +1,29 @@
+<view class="page-wrap">
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:key="sysMallOrderId">
+      <image class="img" src="{{item.productPictureLink}}"></image>
+      <view class="title">
+        <view class="text">{{item.productTitle}}</view>
+        <view class="status">{{item.statusLabel}}</view>
+      </view>
+      <view class="result">
+        <view class="status">{{item.statusLabel}}</view>
+        <van-button class="btn" type="info" round data-id="{{item.sysMallOrderId}}" bindtap="goDetail">
+          查看详情
+        </van-button>
+      </view>
+    </view>
+    <view class="more" wx:if="{{page.total > list.length}}" bindtap="more">获取更多</view>
+    <!-- <view class="item">
+      <image class="img" src=""></image>
+      <view class="title">
+        <view class="text">蓝牙耳机</view>
+        <view class="status">已签收</view>
+      </view>
+      <view class="result">
+        <view class="status">已支付</view>
+        <van-button class="btn" type="info" round bindtap="goDetail">查看详情</van-button>
+      </view>
+    </view> -->
+  </view>
+</view>

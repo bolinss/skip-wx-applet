@@ -1,0 +1,153 @@
+/**index.wxss**/
+page {
+  height: 100%;
+}
+.page-wrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.page-wrap .address-wrapper {
+  padding: 24rpx;
+  background-color: #fff;
+}
+.page-wrap .address-wrapper .header {
+  display: flex;
+  margin-bottom: 20rpx;
+  justify-content: space-between;
+}
+.page-wrap .address-wrapper .header .userinfo {
+  display: flex;
+  font-weight: 700;
+}
+.page-wrap .address-wrapper .header .userinfo .name {
+  margin-right: 24rpx;
+}
+.page-wrap .address-wrapper .header .userinfo .name,
+.page-wrap .address-wrapper .header .userinfo .phone {
+  color: #333;
+  font-size: 30rpx;
+}
+.page-wrap .address-wrapper .address {
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #333333;
+  line-height: 32rpx;
+}
+.page-wrap .produce-detail {
+  display: flex;
+  padding: 24rpx;
+  background-color: #fff;
+  margin-top: 24rpx;
+}
+.page-wrap .produce-detail .img {
+  width: 136rpx;
+  height: 136rpx;
+  margin-right: 24rpx;
+}
+.page-wrap .produce-detail .info .title {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #333333;
+  line-height: 45rpx;
+  margin-bottom: 10rpx;
+}
+.page-wrap .produce-detail .info .price-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-wrap .produce-detail .info .price-info .price {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #ec5063;
+  line-height: 50rpx;
+}
+.page-wrap .produce-detail .info .price-info .price .money {
+  font-weight: 700;
+}
+.page-wrap .produce-detail .info .price-info .price .plus {
+  margin: 0 4rpx;
+}
+.page-wrap .produce-detail .info .price-info .price .unit {
+  margin-left: 4rpx;
+  font-size: 30rpx;
+}
+.page-wrap .produce-detail .info .price-info .num {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: #999999;
+}
+.page-wrap .price-info {
+  padding: 24rpx;
+  background-color: #fff;
+  margin-top: 24rpx;
+}
+.page-wrap .price-info-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  margin-bottom: 24rpx;
+}
+.page-wrap .price-info-item .point {
+  color: #f1914a;
+}
+.page-wrap .price-info-total {
+  margin-top: 40rpx;
+  text-align: right;
+  line-height: 40rpx;
+}
+.page-wrap .pay-type {
+  padding: 24rpx;
+  background-color: #fff;
+  margin-top: 24rpx;
+}
+.page-wrap .pay-type .title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #666666;
+  line-height: 64rpx;
+  margin-bottom: 32rpx;
+}
+.page-wrap .pay-type-item {
+  display: flex;
+  align-items: center;
+}
+.page-wrap .pay-type-item .img {
+  width: 72rpx;
+  height: 72rpx;
+  margin-right: 24rpx;
+}
+.page-wrap .pay-type-item .name {
+  flex: 1;
+}
+.page-wrap .submit {
+  padding: 24rpx;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.page-wrap .submit .total {
+  display: flex;
+  align-items: center;
+}
+.page-wrap .submit .total .label {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #666666;
+  line-height: 64rpx;
+}
+.page-wrap .submit .total .value {
+  color: #ec5063;
+  font-size: 40rpx;
+}
+.page-wrap .submit .van-button {
+  width: 220rpx;
+  height: 84rpx;
+  background: #498cff;
+  border-radius: 40rpx;
+}

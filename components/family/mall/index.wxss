@@ -1,0 +1,92 @@
+/**index.wxss**/
+page {
+  padding-bottom: 150rpx;
+}
+.page-wrap {
+  overflow-x: hidden;
+}
+.page-wrap .search .img-wrapper {
+  position: relative;
+  width: 50rpx;
+  height: 33rpx;
+}
+.page-wrap .search .img-wrapper .search-img {
+  width: 33rpx;
+  height: 33rpx;
+  top: 8rpx;
+  position: absolute;
+}
+.page-wrap .search-content .van-cell--borderless {
+  border-bottom: 0;
+}
+.page-wrap .search-content .van-search {
+  padding: 12rpx 24rpx;
+}
+.page-wrap .search-content .van-search .van-search__action {
+  line-height: 35rpx;
+}
+.page-wrap .search-content .message {
+  position: relative;
+  display: flex;
+}
+.page-wrap .search-content .message-num {
+  position: absolute;
+  right: -24rpx;
+  top: -18rpx;
+}
+.page-wrap .shop-list-wrap .shop-list {
+  padding: 24rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.page-wrap .shop-list-wrap .shop-list .item {
+  background-color: #fff;
+  width: 340rpx;
+  margin-bottom: 24rpx;
+}
+.page-wrap .shop-list-wrap .shop-list .item:nth-child(2n + 1) {
+  margin-right: 23rpx;
+}
+.page-wrap .shop-list-wrap .shop-list .item .img {
+  width: 100%;
+  height: 300rpx;
+}
+.page-wrap .shop-list-wrap .shop-list .item .detail {
+  padding: 24rpx;
+}
+.page-wrap .shop-list-wrap .shop-list .item .detail .title {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 10rpx;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.page-wrap .shop-list-wrap .shop-list .item .detail .price {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #ec5063;
+  margin-bottom: 10rpx;
+}
+.page-wrap .shop-list-wrap .shop-list .item .detail .price .money {
+  font-weight: 700;
+}
+.page-wrap .shop-list-wrap .shop-list .item .detail .price .plus {
+  margin: 0 4rpx;
+}
+.page-wrap .shop-list-wrap .shop-list .item .detail .price .unit {
+  margin-left: 4rpx;
+  font-size: 26rpx;
+}
+.page-wrap .shop-list-wrap .shop-list .item .detail .num {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #999999;
+}
+.page-wrap .shop-list-wrap .more {
+  text-align: center;
+  margin-top: 24rpx;
+  color: #999;
+}

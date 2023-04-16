@@ -1,0 +1,164 @@
+/**index.wxss**/
+page {
+  padding-bottom: 150rpx;
+}
+.page-wrap {
+  overflow-x: hidden;
+  .search {
+    &-content {
+      .van-cell--borderless {
+        border-bottom: 0;
+      }
+      .van-search {
+        padding: 12rpx 24rpx;
+        .van-search__action {
+          line-height: 35rpx;
+        }
+      }
+      .message {
+        position: relative;
+        display: flex;
+        &-num {
+          position: absolute;
+          right: -24rpx;
+          top: -18rpx;
+        }
+      }
+    }
+  }
+  .swiper-wrap {
+    padding: 24rpx;
+    background: #fff;
+  }
+  .ad-wrap {
+    padding: 24rpx;
+    background: #fff;
+    .loading {
+      width: 100%;
+      height: 206rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header-ad {
+      display: flex;
+      .ad {
+        height: 220rpx;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:first-child {
+          margin-right: 24rpx;
+        }
+      }
+    }
+    .ad3 {
+      height: 120rpx;
+      width: 100%;
+      margin-top: 24rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .user-list-wrap {
+    padding: 24rpx;
+    .rank {
+      display: flex;
+      &-info {
+        flex: 1;
+        height: 265rpx;
+        border-radius: 16rpx 16rpx 0 0;
+        margin-right: 12rpx;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 30rpx 0;
+        &:last-child {
+          margin-right: 0;
+        }
+        &-img {
+          width: 60rpx;
+          height: 70rpx;
+          position: absolute;
+          right: 0;
+          padding: 10rpx;
+        }
+        .user-info {
+          text-align: center;
+          color: #fff;
+          &-img {
+            width: 100rpx;
+            height: 100rpx;
+            border-radius: 50%;
+          }
+          .name {
+            margin: 14rpx;
+            font-size: 30rpx;
+          }
+          .address {
+            font-size: 20rpx;
+          }
+        }
+      }
+      .rank-1 {
+        height: 316rpx;
+        padding: 40rpx 0;
+        background: linear-gradient(180deg, #f4d8a3 0%, #dcb56d 100%);
+        .name {
+          margin: 28rpx;
+        }
+        &-img {
+          width: 70rpx;
+          height: 80rpx;
+        }
+      }
+      .rank-2 {
+        background: linear-gradient(157deg, #eef1f5 0%, #b7b7c6 100%);
+        margin-top: 52rpx;
+      }
+      .rank-3 {
+        background: linear-gradient(194deg, #f2c5ae 0%, #e39467 100%);
+        box-shadow: 0 4rpx 8rpx 4rpx rgba(62, 117, 242, 0.06);
+        margin-top: 52rpx;
+      }
+    }
+    .user-list {
+      background-color: #fff;
+      padding: 0 24rpx;
+      &-item {
+        padding: 20rpx 0;
+        display: flex;
+        align-items: center;
+        .rank {
+          margin-right: 36rpx;
+        }
+        .user-info {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          &-img {
+            width: 80rpx;
+            height: 80rpx;
+            border-radius: 50%;
+          }
+          .content {
+            .name {
+              margin-bottom: 10rpx;
+            }
+            .points {
+              display: flex;
+              align-items: center;
+              &-img {
+                width: 24rpx;
+                height: 24rpx;
+                margin-right: 20rpx;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

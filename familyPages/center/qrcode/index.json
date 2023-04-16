@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "white"
+  },
+  "navigationBarTitleText": "添加设备",
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index"
+  }
+}

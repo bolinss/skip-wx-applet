@@ -1,0 +1,21 @@
+<view class="classManage">
+  <view class="dfLine">
+    <view class="name">班级名称</view>
+    <view class="value">{{schoolClassName}}</view>
+  </view>
+  <view class="content" wx:if="{{studentsData && studentsData.length != 0}}">
+    <view class="title">学生列表</view>
+    <view class="line" wx:for="{{studentsData}}" wx:key="sysUnerId">
+      <image src="{{item.avatarUrl?item.avatarUrl:'../../static/public/images/default_uner1.png'}}" style="width:80rpx;height:80rpx;" class="head"></image>
+      <view class="box">
+        <view class="name">{{item.name}}</view>
+        <view class="btn" bindtap="deleteStudents" data-opt="{{item}}">删除</view>
+      </view>
+    </view>
+  </view>
+  <view class="noData" wx:else>
+    <view class="text">暂无数据</view>
+  </view>
+  <view class="df_btn df_btn_grey" bindtap="deleteClass">删除班级</view>
+  <view class="df_btn" bindtap="addStudents">添加学生</view>
+</view>

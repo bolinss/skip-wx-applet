@@ -1,0 +1,37 @@
+<view class="statistic">
+  <view class="classBox">
+    <view class="classItem {{choiceClass.sysSchoolClassInfoId == item.sysSchoolClassInfoId?'on':''}}" wx:for="{{classOriginList}}" wx:key="sysSchoolClassInfoId" bindtap="choiceClassFunc" data-opt="{{item}}">{{item.schoolClassName}}</view>
+  </view>
+	<view class="line">
+		<view class="name">名单</view>
+		<view class="value" bindtap="goChoosePeople">
+			<text wx:if="{{!otherPageData || otherPageData.length == 0}}">请选择</text>
+			<view wx:else class="peopleList">
+				<image wx:for="{{otherPageData}}" wx:key="idCard" src="{{item.avatarUrl?item.avatarUrl:'../../static/public/images/default_uner1.png'}}"></image>
+			</view>
+			<van-icon name="arrow" style="margin-top:8rpx" />
+		</view>
+	</view>
+	<view class="line">
+		<view class="name">任务</view>
+		<view class="value">
+			<text wx:if="{{!bindDeviceData || bindDeviceData.length == 0}}">请选择</text>
+			<view wx:else class="peopleList">
+				<image wx:for="{{bindDeviceData}}" wx:key="sysUnerId" src="{{item.avatarUrl?item.avatarUrl:'../../static/public/images/default_uner1.png'}}"></image>
+			</view>
+			<van-icon name="arrow" style="margin-top:8rpx" />
+		</view>
+	</view>
+ <view class="optBtnBox">
+    <view class="btnItem">合并</view>
+    <view class="btnItem">分项</view>
+    <view class="btnItem">成绩</view>
+    <view class="btnItem">排名</view>
+  </view>
+  <view class="previewBox">
+    <text>预览</text>
+    <van-icon name="description" color="#0081FF" />
+  </view>
+  <view class="df_btn df_btn_grey" bindtap="onCancel">取消</view>
+	<view class="df_btn" bindtap="saveInfo">确认</view>
+</view>

@@ -1,0 +1,16 @@
+<view class="page-wrap">
+  <view class="form-wrap">
+    <van-cell-group>
+      <van-field label="收货人" value="{{ realName }}" required error="{{rules.realName}}" data-key="realName" placeholder="请输入" border="{{ false }}" bind:change="onChange" />
+      <van-field label="手机号" value="{{ contact }}" required error="{{rules.contact}}" data-key="contact" placeholder="请输入" border="{{ false }}" bind:change="onChange" />
+      <van-field label="地区选择" value="{{ address }}" required error="{{rules.address}}" placeholder="请选择" border="{{ false }}" bind:focus="onAreaShowChange" />
+      <van-field label="详细地址" value="{{ addressDetailed }}" required error="{{rules.addressDetailed}}" data-key="addressDetailed" placeholder="请输入" border="{{ false }}" bind:change="onChange" />
+    </van-cell-group>
+  </view>
+  <van-action-sheet bind:click-overlay="onAreaShowChange" show="{{ areaShow }}" actions="{{ actions }}">
+    <van-area area-list="{{ areaList }}" bind:cancel="onAreaShowChange" bind:confirm="selectedArea" />
+  </van-action-sheet>
+  <view class="btn-wrap">
+    <van-button type="info" bindtap="submit">保存</van-button>
+  </view>
+</view>

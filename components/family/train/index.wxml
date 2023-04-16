@@ -1,0 +1,111 @@
+<view class="page-wrap">
+  <view class="train-info-wrap">
+    <view class="user-info">
+      <view class="name-wrap">
+        <image class="uner" src="./images/uner.png" />
+        <view class="name">{{activeUner.name}}</view>
+      </view>
+      <view class="change-user" bindtap="pickerShowChange">
+        切换用户
+        <van-icon name="arrow" />
+      </view>
+    </view>
+    <van-action-sheet show="{{ pickerShow }}" bind:click-overlay="onPickerCancel">
+      <van-picker show-toolbar bind:cancel="onPickerCancel" bind:confirm="onPickerConfirm" columns="{{ unerList }}" />
+    </van-action-sheet>
+    <view class="train-content">
+      <view class="section">
+        <view class="left">
+          <view class="title">跳绳总个数</view>
+          <view class="ka">
+            <view class="ka-item surplus">
+              <view class="txt">剩余</view>
+              <view class="num-wrap">
+                <view class="num">{{markInfo.surplus}}</view>
+                <view class="unit">千卡</view>
+              </view>
+            </view>
+            <view class="ka-item total">
+              <view class="txt">总获取</view>
+              <view class="num-wrap">
+                <view class="num">{{markInfo.gain}}</view>
+                <view class="unit">千卡</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="right" bindtap="goStatistics">
+          <view class="right-content">
+            <view class="num">{{markInfo.skipTotal}}</view>
+            <view class="unit">个</view>
+            <view class="round"></view>
+          </view>
+        </view>
+      </view>
+      <view class="open" wx:if="{{!isOpen}}" bind:tap="handleOpen">
+        展开
+        <image class="arrow" src="./images/arrow.png" />
+      </view>
+      <view wx:if="{{isOpen}}">
+        <van-divider />
+        <view class="section section-prev">
+          <view class="left">
+            <view class="title">最近一次计时跳绳</view>
+            <view class="ka">
+              <view class="ka-item">
+                <view class="txt">比上次</view>
+                <view class="num-wrap">
+                  <view class="num">{{lastInfo.rate}}%</view>
+                  <van-icon class="{{lastInfo.now <= lastInfo.rate ? 'down' : 'up'}}" name="down" />
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="right" bindtap="goStatistics">
+            <view class="right-content">
+              <view class="num-wrap">
+                <view class="num">{{lastInfo.now}}</view>
+                <view class="unit">个</view>
+              </view>
+              <view class="more">
+                <view class="txt">更多数据</view>
+                <van-icon name="arrow" />
+              </view>
+              <view class="round"></view>
+            </view>
+          </view>
+        </view>
+        <view class="open" wx:if="{{isOpen}}" bind:tap="handleOpen">
+          收起
+          <image class="arrow-up" src="./images/arrow.png" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="notify">
+    <van-icon name="volume-o" style="margin-right: 4rpx" />
+    <view class="notify-content">
+      <view class="notify-content-inner">
+        <text>{{notice}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="ad-1">
+    <van-loading class="loading" type="spinner" wx:if="{{loading}}" />
+    <view wx:else>
+      <image class="img" wx:if="{{carouselList['11'] && carouselList['11'][0] && carouselList['11'][0].taskTitleImg}}" style="width: 100%;heigth:100%" data-can-click="{{carouselList['11'][0].canClick}}" data-key="{{carouselList['11'][0].sysSkipPlatformTaskId}}" bindtap="goMatch" src="{{carouselList['11'][0].taskTitleImg}}"></image>
+      <view class="img" wx:else>虚位以待</view>
+    </view>
+  </view>
+  <view class="ad-2">
+    <image class="img" bindtap="goStatistics" src="./images/ad2.png"></image>
+    <image class="img" bindtap="goDevice" src="./images/ad3.png"></image>
+  </view>
+  <view class="ad-3">
+    <van-loading class="loading" type="spinner" wx:if="{{loading}}" />
+    <view wx:else>
+      <image class="img" wx:if="{{carouselList['12'] && carouselList['12'][0] && carouselList['12'][0].taskTitleImg}}" style="width: 100%;heigth:100%" data-can-click="{{carouselList['12'][0].canClick}}" data-key="{{carouselList['12'][0].sysSkipPlatformTaskId}}" bindtap="goMatch" src="{{carouselList['12'][0].taskTitleImg}}"></image>
+      <view class="img" wx:else>虚位以待</view>
+    </view>
+  </view>
+</view>

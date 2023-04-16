@@ -1,0 +1,12 @@
+<view class="classCode">
+  <view class="className">三年级二班</view>
+  <view class="codeImg">
+    <image src="{{codeSrc}}" mode="widthFix"></image>
+  </view>
+  <view class="df_btn" bindtap="saveImg">保存二维码</view>
+  <view class="textbox">
+    <view class="title">提示：</view>
+    <view class="text">1、保存二维码图片，使用家长端扫码加入
+      班级。</view>
+  </view>
+</view>

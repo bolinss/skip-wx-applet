@@ -1,0 +1,6 @@
+<view class="addClass">
+  <view style="border-bottom:1px solid #eee;">
+    <van-field model:value="{{className}}" clearable label="班级名称" input-align="right" placeholder="请输入班级名称" />
+  </view>
+  <view class="df_btn" bindtap="addClassName">确定添加</view>
+</view>

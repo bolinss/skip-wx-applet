@@ -1,0 +1,63 @@
+.taskList{
+  padding: 24rpx;
+  .tabBox{
+    width:90%;
+    display: flex;
+    border:4rpx solid #333;
+    margin:0 auto;
+    border-radius: 10rpx;
+    .tab{
+      flex:1;
+      height: 60rpx;
+      line-height: 60rpx;
+      text-align: center;
+      &:last-child{
+        border-left: 4rpx solid #333;
+      }
+    }
+    .on{
+      background-color: #333;
+      color:#fff;
+    }
+  }
+  .content{
+    background-color: #fff;
+    padding:24rpx;
+    margin-top:24rpx;
+    .box{
+      padding: 30rpx 0;
+      border-bottom: 1px solid #eee;
+      &:last-child{
+        border-bottom: 0;
+      }
+      .titleBox{
+        font-size: 30rpx;
+        display: flex;
+        .title{
+          flex:1;
+        }
+        .status{
+          color:#333330;
+        }
+        .optBox{
+          display: flex;
+          align-items: center;
+          .btn{
+            font-size: 26rpx;
+            display: flex;
+            align-items: center;
+            margin-left: 20rpx;
+            text{
+              margin-left: 4rpx;
+            }
+          }
+        }
+      }
+      .timeBox{
+        color:#999;
+        font-size: 24rpx;   
+        margin-top:10rpx;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.policy {
+  background-color: #fff;
+}
+.policy .content {
+  padding: 30rpx;
+  line-height: 48rpx;
+}
+.policy .p {
+  text-indent: 2em;
+}

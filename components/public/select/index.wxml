@@ -1,0 +1,23 @@
+<!-- 
+  "selectBox": "../../../components/select/index"
+  <selectBox title="选择公司评级(必填)" defaultData="{{choiceEducation}}" columns="{{columns}}" bind:sendSelectData="getSelectData"></selectBox>
+  1.title为初始化显示内容
+  2.getSelectData为确定选择后回调
+  3.columns为数组选项内容
+  4.defaultData为默认选中的字段
+-->
+<view class="selectBox">
+  <view class="selectText {{hasBgColor?'':'nobg'}}" bindtap="showColumn">
+    <text class="text">{{title}}</text>
+    <van-icon name="arrow-down" />
+  </view>
+  <van-popup show="{{ showSelect }}" bind:close="onClose" position="bottom">
+    <van-picker
+      show-toolbar="{{true}}"
+      columns="{{ columns }}" 
+      default-index="{{ defaultIndex }}"
+      bind:change="onChange" 
+      bind:cancel="onCancel" 
+      bind:confirm="onConfirm" />
+  </van-popup>
+</view>

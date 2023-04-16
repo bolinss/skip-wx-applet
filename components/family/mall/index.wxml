@@ -1,0 +1,34 @@
+<view class="page-wrap">
+  <view class="search">
+    <van-search shape="round" class="search-content" use-left-icon-slot use-action-slot="true" bind:clear="clearTitle" bind:change="titleChange" value="{{ productTitle }}" placeholder="商品名称">
+      <!-- <view slot="action" class="message">
+        <van-tag class="message-num" round type="warning">32</van-tag>
+        <van-icon slot="action" class="search-icon" name="chat-o" size="50rpx" />
+      </view> -->
+      <view slot="left-icon" bind:tap="search">
+        <view class="img-wrapper">
+          <image class="search-img" src="./images/search.png"></image>
+        </view>
+      </view>
+    </van-search>
+  </view>
+  <view class="shop-list-wrap">
+    <view class="shop-list">
+      <view class="item" bindtap="goDetail" data-id="{{item.sysMallProductId}}" wx:for="{{list}}" wx:key="sysMallProductId">
+        <image class="img" src="{{item.productPictureLink}}"></image>
+        <view class="detail">
+          <view class="title">{{item.productTitle}}</view>
+          <view class="price">
+            <text class="money">{{item.integralPrice}}</text>
+            <text class="unit">积分</text>
+            <text class="plus">+</text>
+            <text class="money">{{item.price}}</text>
+            <text class="unit">元</text>
+          </view>
+          <view class="num">已兑换{{item.hasSold || 0}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="more" wx:if="{{page.total > list.length}}" bindtap="more">获取更多</view>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+<view class="createTask">
+	<view class="content">
+		<van-cell-group>
+			<van-field model:value="{{ taskName }}" clearable label="任务名称" input-align="right" placeholder="请输入任务名称" />
+			<view class="aline" style="border-bottom:1px solid #ebedf0;">
+				<view class="name">任务类型</view>
+				<view class="value" style="margin-right:-20rpx;">
+					<selectBox title="选择任务类型" columns="{{columns}}" defaultData="{{competitionTypeLabel}}" bind:sendSelectData="getSelectData"></selectBox>
+				</view>
+			</view>
+			<van-field model:value="{{ taskTargetNum }}" type="number" clearable label="任务目标" input-align="right" placeholder="{{targetText}}" />
+			<view class="aline" style="border-bottom:1px solid #ebedf0;">
+				<view class="name">班级</view>
+				<view class="value" style="margin-right:-20rpx;">
+					<selectBox title="选择班级" columns="{{classList}}" defaultData="{{choiceClassLabel}}" bind:sendSelectData="getClassData"></selectBox>
+				</view>
+			</view>
+		</van-cell-group>
+	</view>
+	<view class="line">
+		<view class="name">组员</view>
+		<view class="value" bindtap="goChoosePeople">
+			<text wx:if="{{!otherPageData || otherPageData.length == 0}}">请选择</text>
+			<view wx:else class="peopleList">
+				<image wx:for="{{otherPageData}}" wx:key="idCard" src="{{item.avatarUrl?item.avatarUrl:'../../static/public/images/default_uner1.png'}}"></image>
+			</view>
+			<van-icon name="arrow" style="margin-top:8rpx" />
+		</view>
+	</view>
+	<view class="line">
+		<view class="name">临时设备</view>
+		<view class="value" bindtap="goTemp">
+			<text wx:if="{{!bindDeviceData || bindDeviceData.length == 0}}">请选择</text>
+			<view wx:else class="peopleList">
+				<image wx:for="{{bindDeviceData}}" wx:key="sysUnerId" src="{{item.avatarUrl?item.avatarUrl:'../../static/public/images/default_uner1.png'}}"></image>
+			</view>
+			<van-icon name="arrow" style="margin-top:8rpx" />
+		</view>
+	</view>
+	<view class="df_btn df_btn_grey" bindtap="saveInfo" data-opt="{{true}}">保存草稿</view>
+	<view class="df_btn" bindtap="saveInfo" data-opt="{{false}}">发布任务</view>
+</view>

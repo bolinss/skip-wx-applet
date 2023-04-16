@@ -1,0 +1,83 @@
+<view class="page-wrap">
+  <view class="search">
+    <!-- <van-search shape="round" class="search-content" use-action-slot="true" value="{{ value }}" placeholder="请输入搜索关键词">
+      <view slot="action" class="message">
+        <van-tag class="message-num" round type="warning">32</van-tag>
+        <van-icon slot="action" class="search-icon" name="chat-o" size="50rpx" />
+      </view>
+    </van-search> -->
+    <swiper class="swiper-wrap" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{carouselList['1']}}" wx:key="index">
+        <swiper-item>
+          <image data-key="{{item.sysSkipPlatformTaskId}}" bindtap="goMatch" wx:for="{{carouselList['1']}}" wx:key="sysSkipPlatformTaskId" style="width: 100%;heigth:100%" src="{{item.taskTitleImg}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="ad-wrap">
+      <van-loading class="loading" type="spinner" wx:if="{{loading}}" />
+      <view wx:else>
+        <view class="header-ad">
+          <image class="ad" wx:if="{{carouselList['2'] && carouselList['2'][0] && carouselList['2'][0].taskTitleImg}}" style="width: 100%;heigth:100%" data-key="{{carouselList['2'][0].sysSkipPlatformTaskId}}" bindtap="goMatch" src="{{carouselList['2'][0].taskTitleImg}}"></image>
+          <view class="ad" wx:else>虚位以待</view>
+          <image class="ad" wx:if="{{carouselList['3'] && carouselList['3'][0] && carouselList['3'][0].taskTitleImg}}" style="width: 100%;heigth:100%" data-key="{{carouselList['3'][0].sysSkipPlatformTaskId}}" bindtap="goMatch" src="{{carouselList['3'][0].taskTitleImg}}"></image>
+          <view class="ad" wx:else>虚位以待</view>
+        </view>
+        <image class="ad3" wx:if="{{carouselList['4'] && carouselList['4'][0] && carouselList['4'][0].taskTitleImg}}" style="width: 100%;heigth:100%" data-key="{{carouselList['4'][0].sysSkipPlatformTaskId}}" bindtap="goMatch" src="{{carouselList['4'][0].taskTitleImg}}"></image>
+        <view class="ad3" wx:else>虚位以待</view>
+      </view>
+    </view>
+    <van-tabs id="tabs" active="{{activeTask.name}}" bind:change="onUnerChange">
+      <van-tab wx:for="{{taskList}}" wx:key="taskId" title="{{item.taskName}}" name="{{item.taskId}}"></van-tab>
+    </van-tabs>
+    <view class="user-list-wrap">
+      <view class="rank">
+        <view class="rank-info rank-2">
+          <image class="rank-info-img" src="../../../components/family/home/images/rank-2.png"></image>
+          <view class="user-info">
+            <image class="user-info-img" src="{{topThree[1].unerAvatarUrl || '../../../components/family/home/images/avatar.png'}}"></image>
+            <view class="name">{{topThree[1].unerName|| '虚以待位'}}</view>
+            <view class="address">
+              {{topThree[1].score || 0}}}  |  {{topThree[1].address || '暂无'}}
+            </view>
+          </view>
+        </view>
+        <view class="rank-info rank-1">
+          <image class="rank-info-img" src="../../../components/family/home/images/rank-1.png"></image>
+          <view class="user-info">
+            <image class="user-info-img" src="{{topThree[0].unerAvatarUrl || '../../../components/family/home/images/avatar.png'}}"></image>
+            <view class="name">{{topThree[0].unerName || '虚以待位'}}</view>
+            <view class="address">
+              {{topThree[0].score || 0}}  |  {{topThree[0].address || '暂无'}}
+            </view>
+          </view>
+        </view>
+        <view class="rank-info rank-3">
+          <image class="rank-info-img" src="../../../components/family/home/images/rank-3.png"></image>
+          <view class="user-info">
+            <image class="user-info-img" src="{{topThree[2].unerAvatarUrl || '../../../components/family/home/images/avatar.png'}}"></image>
+            <view class="name">{{topThree[2].unerName  || '虚以待位'}}</view>
+            <view class="address">
+              {{topThree[2].score || 0}}  |  {{topThree[2].address|| '暂无'}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="user-list">
+        <view class="user-list-item" wx:for="{{rankData}}" wx:key="index">
+          <view class="rank">{{item.ranking}}</view>
+          <view class="user-info">
+            <image class="user-info-img" src="{{item.unerAvatarUrl}}"></image>
+            <view class="content">
+              <view class="name">{{item.unerName}}</view>
+              <view class="points">
+                <image class="points-img" src="../../../components/family/home/images/points.png"></image>
+                <view>{{item.score}}</view>
+              </view>
+            </view>
+          </view>
+          <view class="address">{{item.address}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "navigationBarTitleText": "订单详情",
+  "usingComponents": {
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-cell": "@vant/weapp/cell/index"
+  }
+}

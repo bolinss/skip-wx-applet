@@ -1,0 +1,16 @@
+.tool .content {
+  background: #fff;
+  padding: 40rpx 0;
+  overflow: hidden;
+}
+.tool .content .itemBox {
+  width: 25%;
+  float: left;
+}
+.tool .content .itemBox image {
+  display: block;
+  margin: 0 auto;
+}
+.tool .content .itemBox .name {
+  text-align: center;
+}

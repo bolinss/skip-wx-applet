@@ -1,0 +1,91 @@
+/**index.wxss**/
+page {
+  height: 100%;
+}
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.page-wrap .list {
+  flex: 1;
+}
+.page-wrap .list .item {
+  background-color: #fff;
+  margin: 24rpx 0;
+  padding: 20rpx 24rpx;
+  display: flex;
+  align-items: center;
+}
+.page-wrap .list .item .avatar {
+  margin-right: 24px;
+}
+.page-wrap .list .item .avatar .img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.page-wrap .list .item .userinfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page-wrap .list .item .userinfo .header {
+  display: flex;
+  margin-bottom: 10rpx;
+}
+.page-wrap .list .item .userinfo .header .name {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333333;
+  margin-right: 20rpx;
+}
+.page-wrap .list .item .userinfo .header .status .van-tag {
+  padding: 2rpx 10rpx;
+  border-radius: 14rpx;
+}
+.page-wrap .list .item .userinfo .header .status .van-tag--success {
+  background: #a9ead3;
+  color: #47d99b;
+}
+.page-wrap .list .item .userinfo .header .status .van-tag--danger {
+  background: #ededed;
+  color: #666666;
+}
+.page-wrap .list .item .userinfo .phone {
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #999999;
+}
+.page-wrap .list .item .btn {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  font-weight: 400;
+  width: 136rpx;
+  height: 44rpx;
+  border-radius: 14rpx;
+  background-color: #ededed;
+  color: #666666;
+  justify-content: center;
+}
+.page-wrap .list .item .btn-unauth {
+  background: #498cff;
+  color: #fff;
+}
+.page-wrap .btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 64rpx;
+  width: 100%;
+}
+.page-wrap .btn-wrap .btn-save {
+  margin-top: 48rpx;
+}
+.page-wrap .btn-wrap .van-button {
+  width: 580rpx;
+  height: 80rpx;
+  border-radius: 44rpx;
+}

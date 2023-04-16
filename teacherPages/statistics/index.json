@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "统计",
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index",
+    "selectBox": "../../../components/public/select/index"
+  }
+}

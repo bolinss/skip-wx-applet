@@ -1,0 +1,93 @@
+/**index.wxss**/
+.page-wrap {
+  .header {
+    position: relative;
+    padding: 26rpx 45rpx 130rpx 45rpx;
+    background-color: #4f90ff;
+    &-inner {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+    }
+    .userinfo {
+      display: flex;
+      .avatar {
+        width: 126rpx;
+        height: 126rpx;
+        border-radius: 50%;
+        margin-right: 20rpx;
+      }
+      .name {
+        height: 100%;
+        .txt {
+          font-size: 36rpx;
+          font-weight: 500;
+          color: #ffffff;
+          margin-bottom: 26rpx;
+        }
+        .id {
+          font-size: 28rpx;
+          font-weight: 400;
+          color: #a6c6fc;
+        }
+      }
+    }
+    .icon {
+      color: #ffffff;
+    }
+    .point {
+      position: absolute;
+      width: 700rpx;
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+      background-color: #ffffff;
+      height: 166rpx;
+      left: 24rpx;
+      bottom: -80rpx;
+      display: flex;
+      border-radius: 8rpx;
+      .item {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        .num {
+          font-size: 44rpx;
+          font-weight: 400;
+          color: #222222;
+        }
+        .unit {
+          margin-top: 16rpx;
+          font-size: 24rpx;
+          font-weight: 400;
+          color: #999999;
+        }
+        .scan {
+          font-size: 60rpx;
+        }
+      }
+    }
+  }
+
+  .body {
+    margin-top: 104rpx;
+    .group {
+      margin-bottom: 24rpx;
+      background-color: #ffffff;
+      .item-wrap {
+        padding: 0 24rpx;
+        .item {
+          display: flex;
+          justify-content: space-between;
+          padding: 27rpx 0;
+          border-bottom: 2rpx solid #ededed;
+          .txt {
+            font-size: 32rpx;
+            font-weight: 400;
+            color: #333333;
+          }
+        }
+      }
+    }
+  }
+}

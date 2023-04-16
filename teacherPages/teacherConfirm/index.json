@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "教师认证",
+  "usingComponents": {
+    "selectBox": "../../../components/public/select/index"
+  }
+}

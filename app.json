@@ -1,0 +1,88 @@
+{
+  "pages": [
+    "pages/public/start/index",
+    "pages/public/index/index",
+    "pages/public/teacherIndex/index",
+    "pages/public/userAgreement/index",
+    "pages/public/login/index",
+    "pages/public/chooseRole/index"
+  ],
+  "subpackages": [
+    {
+      "root": "familyPages",
+      "pages": [
+        "match/index",
+        "center/order/index",
+        "center/authorization/code/index",
+        "center/qrcode/index",
+        "statistics/index",
+        "center/unerList/index",
+        "center/unerList/detail/index",
+        "center/unerList/chooseUNer/index",
+        "mall/shopDetail/index",
+        "mall/shopDetail/confirmOrder/index",
+        "mall/shopDetail/orderDetail/index",
+        "center/userInfo/address/detail/index",
+        "center/device/index",
+        "center/transaction/index",
+        "center/transaction/exchange/index",
+        "center/authorization/index",
+        "center/userInfo/index",
+        "center/userInfo/phone/index",
+        "center/userInfo/address/index",
+        "main/index",
+        "bindRope/index"
+      ]
+    },
+    {
+      "root": "teacherPages",
+      "name": "pack2",
+      "pages": [
+        "teacherConfirm/index",
+        "myInfo/index",
+        "classDetails/index",
+        "classManage/index",
+        "deviceManage/index",
+        "tempEquipment/index",
+        "createTask/index",
+        "main/index",
+        "choosePeople/index",
+        "changePhone/index",
+        "addClass/index",
+        "policy/index",
+        "addStudents/index",
+        "taskList/index",
+        "reportStat/index",
+        "statistics/index",
+        "chooseNameList/index",
+        "classCode/index"
+      ]
+    }
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "navigationBarTitleText": "跳绳项目",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "onReachBottomDistance": 50,
+    "navigationBarBackgroundColor": "#f5f5f5",
+    "backgroundColor": "#f5f5f5"
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-panel": "@vant/weapp/panel/index",
+    "van-popup": "@vant/weapp/popup/index"
+  }
+}

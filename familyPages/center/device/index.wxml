@@ -1,0 +1,210 @@
+<view class="page-wrap">
+  <view class="tabs-wrapper">
+    <van-tabs class="tabs" id="tabs" bind:change="onUnerChange">
+      <van-tab wx:for="{{unerList}}" wx:key="sysUnerId" title="{{item.name}}" name="{{item.sysUnerId}}"></van-tab>
+    </van-tabs>
+    <view class="edit" bindtap="goPage">
+      <van-icon name="edit" />
+      管理
+    </view>
+  </view>
+  <van-collapse accordion class="collapse" value="{{ activeAction }}" bind:change="onCollapseChange">
+    <van-collapse-item class="userinfo" title="个人信息" name="1">
+      <view class="item">
+        <text class="label">姓名</text>
+        <text class="value">{{activeUnerInfo.name}}</text>
+      </view>
+      <view class="item">
+        <text class="label">证件号</text>
+        <text class="value">{{activeUnerInfo.name}}</text>
+      </view>
+      <view class="item">
+        <text class="label">年龄</text>
+        <text class="value">{{activeUnerInfo.name}}</text>
+      </view>
+      <view class="item">
+        <text class="label">性别</text>
+        <text class="value">{{activeUnerInfo.name === 1 ? '男':'女'}}</text>
+      </view>
+      <view class="item">
+        <text class="label">学校</text>
+        <text class="value">{{activeUnerInfo.schoolInfo.schoolName || '-' }}</text>
+        <text class="change" data-key="sysSchoolInfoId" bindtap="pickerShowChange">更改</text>
+      </view>
+      <view class="item">
+        <text class="label">班级</text>
+        <text class="value">{{activeUnerInfo.schoolClassInfo.schoolClassName || '-'}}</text>
+        <text class="change" data-key="sysSchoolClassInfoId" bindtap="pickerShowChange">更改</text>
+      </view>
+      <view class="item">
+        <text class="label">身高</text>
+        <text class="value">{{activeUnerInfo.height}}CM</text>
+        <text class="change" data-key="height" data-name="身高" bindtap="dialogShowChange">更改</text>
+      </view>
+      <view class="item">
+        <text class="label">体重</text>
+        <text class="value">{{activeUnerInfo.weight}}KG</text>
+        <text class="change" data-key="weight" data-name="体重" bindtap="dialogShowChange">更改</text>
+      </view>
+      <van-action-sheet show="{{ pickerShow }}" bind:click-overlay="onPickerCancel">
+        <van-picker show-toolbar bind:cancel="onPickerCancel" bind:confirm="onPickerConfirm" columns="{{ pickerList }}" bind:confirm="onPickerConfirm" />
+      </van-action-sheet>
+      <van-dialog use-slot title="{{dialogTitle}}" show="{{ dialogShow }}" show-cancel-button beforeClose="{{ beforeClose }}">
+        <van-field type="number" focus="{{focus}}" model:value="{{ updateValue }}" label="请输入" placeholder="请输入" border="{{ false }}" />
+      </van-dialog>
+    </van-collapse-item>
+    <van-collapse-item title="使用设备" name="2">
+      <view class="deview-list">
+        <view class="item" wx:for="{{deviceList}}" wx:key="index">
+          <view class="info">
+            <view class="title">
+              <view class="txt">{{item.deviceModel}}</view>
+              <view class="del">
+                <van-tag round type="primary" size="medium" bindtap="delDevice" data-refId="{{item.refId}}">
+                  删除设备
+                </van-tag>
+              </view>
+            </view>
+            <view class="field">
+              <view class="label">设备状态</view>
+              <view class="status">
+                <van-tag round type="{{item.deviceState === 'NORMAL'? 'success' : 'danger'}}">
+                  {{item.deviceStateLabel}}
+                </van-tag>
+              </view>
+            </view>
+            <view class="field">
+              <view class="label">电量</view>
+              <view class="txt">{{item.batteryPercentage}}</view>
+            </view>
+            <view class="field">
+              <view class="label">激活时间</view>
+              <view class="txt">{{item.deviceActivationDate}}</view>
+            </view>
+            <view class="field">
+              <view class="label">服务时间</view>
+              <view class="txt">{{item.deviceActivationDate}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <van-dialog id="van-dialog-del" />
+    </van-collapse-item>
+    <van-collapse-item name="3">
+      <view class="collapse-title" slot="title">
+        <image class="icon" src="./images/1v1.png"></image>
+        1v1
+      </view>
+      <view class="v1-wrap">
+        <view class="item">
+          <view class="title">胜</view>
+          <view class="num">
+            <view class="txt">{{statistical1V1.success}}</view>
+            <view class="unit">场</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="title">负</view>
+          <view class="num">
+            <view class="txt">{{statistical1V1.failure}}</view>
+            <view class="unit">场</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="title">胜率</view>
+          <view class="num">
+            <view class="txt">{{statistical1V1.percent}}</view>
+            <view class="unit">%</view>
+          </view>
+        </view>
+        <view class="item"></view>
+      </view>
+      <view class="v1-table">
+        <view class="th">
+          <text class="name">对方名称</text>
+          <text class="name time">时间</text>
+          <text class="name point">成绩</text>
+          <text class="name">结果</text>
+        </view>
+        <view class="td" wx:for="{{statistical1v1History}}" wx:key="index">
+          <text class="value">{{item.otherUnerName}}</text>
+          <text class="value time">{{item.battleStartTime}}</text>
+          <text class="value point">
+            <text class="self">{{item.myScore}}</text>
+            <text style="margin: 0 10rpx">|</text>
+            <text class="other">{{item.otherScore}}</text>
+          </text>
+          <text class="value {{item.battleResult}}">{{item.battleResultText}}</text>
+        </view>
+      </view>
+    </van-collapse-item>
+    <van-collapse-item name="4">
+      <view class="collapse-title" slot="title">
+        <image class="icon" src="./images/honur.png"></image>
+        荣誉榜
+      </view>
+      <view class="v1-wrap">
+        <view class="item">
+          <view class="title">场次</view>
+          <view class="num">
+            <view class="txt">{{statisticalHonor.total}}</view>
+            <view class="unit">场</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="title">冠军</view>
+          <view class="num">
+            <view class="txt">{{statisticalHonor.champion}}</view>
+            <view class="unit">场</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="title">亚军</view>
+          <view class="num">
+            <view class="txt">{{statisticalHonor.secondPlace}}</view>
+            <view class="unit">场</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="title">季军</view>
+          <view class="num">
+            <view class="txt">{{statisticalHonor.thirdPlace}}</view>
+            <view class="unit">场</view>
+          </view>
+        </view>
+      </view>
+      <view class="honur-table">
+        <view class="th">
+          <text class="name">赛事名称</text>
+          <text class="name">成绩</text>
+          <text class="name">名次</text>
+          <text class="name">时间</text>
+        </view>
+        <view class="td" wx:for="{{statisticalHonorHistory}}" wx:key="index">
+          <text class="value">{{item.taskName}}</text>
+          <text class="value">{{item.myScore}}</text>
+          <text class="value {{item.myRankingCss}}">{{item.myRankingText}}</text>
+          <text class="value time">{{item.recordTime}}</text>
+        </view>
+        <!-- <view class="td">
+          <text class="value">秋季赛</text>
+          <text class="value">222</text>
+          <text class="value rank-2">季军</text>
+          <text class="value time">2021.06.21</text>
+        </view>
+        <view class="td">
+          <text class="value">秋季赛</text>
+          <text class="value">222</text>
+          <text class="value">第9民</text>
+          <text class="value time">2021.06.21</text>
+        </view>
+        <view class="td">
+          <text class="value">秋季赛</text>
+          <text class="value">222</text>
+          <text class="value rank-3">亚军</text>
+          <text class="value time">2021.06.21</text>
+        </view> -->
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+</view>

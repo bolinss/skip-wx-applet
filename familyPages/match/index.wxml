@@ -1,0 +1,16 @@
+<view>
+  <view class="tabs-wrapper">
+    <van-tabs class="tabs" id="tabs" bind:change="onUnerChange">
+      <van-tab wx:for="{{unerList}}" wx:key="sysUnerId" title="{{item.name}}" name="{{item.sysUnerId}}"></van-tab>
+    </van-tabs>
+  </view>
+  <view class="page-wrap">
+    <rich-text nodes="{{detail.taskIntroduction}}"></rich-text>
+    <view class="btn-wrap">
+      <van-button class="btn-save" type="info" disabled="{{activeUner.join}}" bindtap="sign">
+        {{activeUner.join ? '已报名': '立即报名'}}
+      </van-button>
+      <van-button type="text" bindtap="back">{{activeUner.join ? '取消报名': '返回主页'}}</van-button>
+    </view>
+  </view>
+</view>

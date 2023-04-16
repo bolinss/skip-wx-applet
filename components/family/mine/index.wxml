@@ -1,0 +1,72 @@
+<view class="page-wrap">
+  <view class="header">
+    <view class="header-inner" bindtap="go" data-type="userInfo">
+      <view class="userinfo">
+        <image round class="avatar" src="{{user.userAvatarUrl}}" />
+        <view class="name">
+          <view class="txt">{{user.userNickName}}</view>
+          <view class="id">ID:{{user.sysAppletUserId}}</view>
+        </view>
+      </view>
+      <van-icon class="icon" name="arrow" />
+    </view>
+    <view class="point">
+      <view class="item">
+        <view class="num">{{integralTotal || 0}}</view>
+        <view class="unit">我的积分</view>
+      </view>
+      <view class="item">
+        <view class="num">{{calorieTotal || 0}}</view>
+        <view class="unit">我的卡路里</view>
+      </view>
+      <!-- <view class="item" bindtap="scanCode">
+        <van-icon class="scan" name="scan" />
+        <view class="unit">扫一扫添加</view>
+      </view> -->
+      <view class="item" bindtap="goBindRope">
+        <van-icon class="scan" name="idcard" />
+        <view class="unit">绑定跳绳</view>
+      </view>
+    </view>
+  </view>
+  <view class="body">
+    <view class="group">
+      <view class="item-wrap" bindtap="go" data-type="device">
+        <view class="item">
+          <view class="txt">设备管理</view>
+          <van-icon class="icon" name="arrow" />
+        </view>
+      </view>
+      <view class="item-wrap" bindtap="go" data-type="authorization">
+        <view class="item">
+          <view class="txt">授权管理</view>
+          <van-icon class="icon" name="arrow" />
+        </view>
+      </view>
+      <view class="item-wrap" bindtap="go" data-type="order">
+        <view class="item">
+          <view class="txt">我的兑换</view>
+          <van-icon class="icon" name="arrow" />
+        </view>
+      </view>
+      <view class="item-wrap" bindtap="go" data-type="transaction">
+        <view class="item">
+          <view class="txt">交易明细</view>
+          <van-icon class="icon" name="arrow" />
+        </view>
+      </view>
+      <view class="item-wrap">
+        <view class="item">
+          <view class="txt">条款政策</view>
+          <van-icon class="icon" name="arrow" />
+        </view>
+      </view>
+      <view class="item-wrap">
+        <view class="item">
+          <view class="txt">帮助中心</view>
+          <van-icon class="icon" name="arrow" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

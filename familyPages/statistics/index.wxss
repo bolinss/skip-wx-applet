@@ -1,0 +1,49 @@
+.container {
+  padding: 0;
+}
+.container .tabs,
+.container .bar {
+  width: 100%;
+}
+.container .bar .van-nav-bar {
+  height: 118rpx;
+}
+.container ec-canvas {
+  width: 750rpx;
+  height: 542rpx;
+  background-color: #fff;
+}
+.container .tag-list {
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  padding: 24rpx 0;
+}
+.container .tag-list .tag-item {
+  width: 200rpx;
+  height: 72rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25rpx;
+  background-color: #eeeeee;
+}
+.container .tag-list .tag-item:last-child {
+  margin-right: 0;
+}
+.container .minite {
+  width: 100%;
+  height: 490rpx;
+  padding: 24rpx;
+}
+.container .minite .content {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.container .minite .content ec-canvas {
+  width: 700rpx;
+  height: 440rpx;
+  background-color: #fff;
+}

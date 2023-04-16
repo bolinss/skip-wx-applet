@@ -1,0 +1,21 @@
+<!-- index.wxml -->
+<view class="container">
+  <van-tabs id="tabs" class="tabs" bind:change="onUnerChange">
+    <van-tab wx:for="{{unerList}}" wx:key="sysUnerId" title="{{item.name}}" name="{{item.sysUnerId}}"></van-tab>
+  </van-tabs>
+  <van-nav-bar class="bar" title="{{curDateLabel}}" bind:click-left="onClickLeft" bind:click-right="onClickRight">
+    <van-icon name="arrow" slot="right" />
+    <van-icon name="arrow-left" slot="left" />
+  </van-nav-bar>
+  <ec-canvas id="mychart-line-hour" bindtap="chartClick" canvas-id="mychart-line-hour" ec="{{ ecHour }}"></ec-canvas>
+  <view class="tag-list">
+    <view class="tag-item">{{activeHour.startTime}}</view>
+    <view class="tag-item">{{activeHour.totalNum}}个</view>
+    <view class="tag-item">{{activeHour.energy}}千卡</view>
+  </view>
+  <view class="minite">
+    <view class="content">
+      <ec-canvas id="mychart-line-minite" canvas-id="mychart-line-minite" ec="{{ ecMinite }}"></ec-canvas>
+    </view>
+  </view>
+</view>

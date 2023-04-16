@@ -1,0 +1,43 @@
+<view class="page-wrap">
+
+  <!-- 二维码错误结果 START -->
+  <view wx:if="{{qrcodeErrorFlag}}">
+    <view class="header">{{qrcodeErrorMessage || '未知二维码错误!'}}</view>
+  </view>
+  <!-- 二维码错误结果 END -->
+
+  <!-- 设备二维码结果 START -->
+  <view wx:elif="{{qrcodeResult.skipDeviceCodeFlag}}">
+    <view class="header" wx:if="{{!qrcodeErrorFlag}}">设备标识: {{qrcodeResult.skipDevice.sysSkipDeviceId}}</view>
+    <view class="header" wx:if="{{qrcodeErrorFlag}}">{{qrcodeErrorMessage || '未知二维码错误!'}}</view>
+    <view class="body" wx:if="{{!qrcodeErrorFlag}}">
+      <view class="promet">请选择使用此设备的UNer</view>
+      <view class="group">
+        <van-cell title="UNer" data-key="gender" is-link value="{{ activeUNer.name }}" bind:click="goUnerList" />
+      </view>
+    </view>
+  </view>
+  <!-- 设备二维码结果 END -->
+
+  <!-- 班级二维码结果 START -->
+  <view wx:elif="{{qrcodeResult.schoolClassCodeFlag}}">
+    <view class="header">
+      加入班级: {{qrcodeResult.schoolClass.schoolClassName}}
+    </view>
+    <view class="body">
+      <view class="promet">请关联班级成员</view>
+      <view class="group">
+        <van-cell title="UNer" data-key="gender" is-link value="{{ activeUNer.name }}" bind:click="goUnerList" />
+      </view>
+    </view>
+  </view>
+  <!-- 班级二维码结果 END -->
+  
+  <!-- 功能按钮 START -->
+  <view class="btn-wrap">
+    <van-button type="defalut" class="btn-cancel" bindtap="cancel">返回</van-button>
+    <van-button type="info" bindtap="submit" wx:if="{{!qrcodeErrorFlag}}">保存</van-button>
+  </view>
+  <!-- 功能按钮 END -->
+
+</view>

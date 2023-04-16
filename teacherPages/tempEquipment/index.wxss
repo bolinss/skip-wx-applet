@@ -1,0 +1,26 @@
+.inputBox {
+  background-color: #fff;
+}
+.content {
+  margin-top: 20rpx;
+}
+.content .line {
+  display: flex;
+  background-color: #fff;
+  padding: 0 24rpx;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.content .line .head {
+  margin: 0 24rpx;
+}
+.content .line .name {
+  flex: 1;
+  padding: 32rpx 0;
+}
+.icon1 {
+  width: 32rpx;
+  height: 32rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 32rpx;
+}

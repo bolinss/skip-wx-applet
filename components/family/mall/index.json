@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "navigationBarTitleText": "商城",
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index"
+  }
+}

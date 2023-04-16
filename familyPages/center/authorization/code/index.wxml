@@ -1,0 +1,15 @@
+<view class="page-wrap">
+  <view class="code">
+    <view class="title">微信扫码授权</view>
+    <view class="img-wrapper">
+      <image style="width: 100%;height:100%" src="{{code}}"></image>
+    </view>
+  </view>
+  <view class="btn-wrap">
+    <van-button round type="info" bindtap="saveImg">保存二维码</van-button>
+  </view>
+  <view class="promet">
+    <view class="title">提示</view>
+    <view class="content">1、保存二维码图片，扫码给微信授权。</view>
+  </view>
+</view>

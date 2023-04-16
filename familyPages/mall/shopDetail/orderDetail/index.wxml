@@ -1,0 +1,74 @@
+<view class="page-wrap">
+  <view class="address-wrapper">
+    <view class="title">收货地址</view>
+    <view class="header">
+      <view class="userinfo">
+        <view class="name">{{detail.receiverName}}</view>
+        <view class="phone">{{detail.receiverPhone}}</view>
+      </view>
+      <view class="handle" bindtap="goAddress" wx:if="{{detail.status === 'WAIT_PAY' || detail.status === 'WAIT_DELIVERY'}}">
+        修改
+        <van-icon name="arrow" />
+      </view>
+    </view>
+    <view class="address">
+      {{detail.receiverProvince}} {{detail.receiverRegion}} {{detail.receiverCity}} {{detail.receiverDetailAddress}}
+    </view>
+  </view>
+  <view class="produce-detail">
+    <image class="img" src="{{detail.productPictureLink}}"></image>
+    <view class="info">
+      <view class="title">{{detail.productTitle}}</view>
+      <view class="price-info">
+        <view class="price">
+          <text class="money">{{detail.payIntegration}}</text>
+          <text class="unit">积分</text>
+          <text class="plus">+</text>
+          <text class="money">{{detail.payAmount}}</text>
+          <text class="unit">元</text>
+        </view>
+      </view>
+    </view>
+    <view class="status">{{detail.statusLabel}}</view>
+  </view>
+  <view class="order-info">
+    <view class="title">订单信息</view>
+    <view class="order-info-item">
+      <view class="label">订单编号</view>
+      <view class="value">{{detail.orderSn}}</view>
+    </view>
+    <view class="order-info-item">
+      <view class="label">下单时间</view>
+      <view class="value">{{detail.createTime}}</view>
+    </view>
+    <view class="order-info-item">
+      <view class="label">商品总价</view>
+      <view class="value point">{{detail.totalAmount}}</view>
+    </view>
+    <!-- <view class="order-info-item">
+      <view class="label">活动优惠</view>
+      <view class="value point">{{detail.totalAmount}}</view>
+    </view> -->
+    <view class="order-info-item">
+      <view class="label">积分抵扣</view>
+      <view class="value point">{{detail.payIntegration}}</view>
+    </view>
+    <view class="order-info-item real-price">
+      <view class="label">实付款</view>
+      <view class="value point">￥{{detail.payAmount}}</view>
+    </view>
+  </view>
+  <view class="logistics-info">
+    <van-cell is-link title="物流信息" link-type="navigateTo" url="/pages/dashboard/index" />
+  </view>
+  <view class="promet">
+    <van-icon name="warning-o" />
+    <text>积分兑换的商品如无质量问题不支持退换货</text>
+  </view>
+  <view class="btn-wrap">
+    <van-button type="defalut" class="btn-cancel" wx:if="{{detail.status === 'WAIT_PAY'}}" bindtap="cancel">
+      取消订单
+    </van-button>
+    <van-button type="info" bindtap="pay" wx:if="{{detail.status === 'WAIT_PAY'}}">去支付</van-button>
+  </view>
+</view>

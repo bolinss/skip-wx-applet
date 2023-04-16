@@ -1,0 +1,24 @@
+<view class="teacherConfirm">
+	<view>
+		<van-field model:value="{{realName}}" clearable label="真实姓名" input-align="right" placeholder="请输入真实姓名" />
+	</view>
+	<view>
+		<van-field model:value="{{certificateNo}}" title-width="200rpx" clearable label="资格证编号" input-align="right" placeholder="请输入教师资格证编号" />
+	</view>
+	<view class="aline">
+		<view class="name">任职学校</view>
+		<view class="value">
+			<selectBox title="点击选择任职学校" columns="{{schoolList}}" bind:sendSelectData="getSelectData"></selectBox>
+		</view>
+	</view>
+	<view style="margin-top:20rpx;">
+		<van-field model:value="{{teacherPhone}}" clearable label="手机号" input-align="right" placeholder="请输入手机号" />
+	</view>
+	<view style="margin-top:20rpx">
+		<van-field model:value="{{ teacherPhoneCode }}" center clearable label="短信验证码" placeholder="请输入短信验证码" border="{{ false }}" use-button-slot>
+			<van-button slot="button" size="small" type="default" bindtap="sendCode">发送验证码</van-button>
+		</van-field>
+	</view>
+	<view class="promet">{{text}}</view>
+		<view class="df_btn" bindtap="submit">提交审核</view>
+	</view>

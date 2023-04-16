@@ -1,0 +1,52 @@
+<view class="page-wrap">
+  <view class="tabs">
+    <view class="tab {{activeTab === 'all' ? 'active' : ''}}" data-id="all" bindtap="tabChange">
+      <view class="text">全部积分</view>
+      <view class="num">{{integralTotal}}</view>
+    </view>
+    <view class="tab {{activeTab === 'ca' ? 'active' : ''}}" data-id="ca" bindtap="tabChange">
+      <view class="text">卡路里值</view>
+      <view class="num">{{calorieTotal}}</view>
+    </view>
+  </view>
+  <view class="list-wrap">
+    <view class="header-wrap">
+      <view class="header">
+        本月获取
+        <text class="num">{{activeTab === 'ca' ? timeRevenueIntegral : timeRevenueIntegral}}</text>
+        已使用
+        {{activeTab === 'ca' ? timeRevenueIntegral  : timeExpenseIntegral}}
+      </view>
+      <view class="exchange" wx:if="{{activeTab === 'ca' }}" bindtap="goExchange">
+        兑换积分
+        <van-icon name="arrow" />
+      </view>
+    </view>
+    <view class="list">
+      <view class="item" wx:for="{{list}}" wx:key="index">
+        <view class="detail">
+          <view class="title">{{item.subject}}</view>
+          <view class="time">{{item.tradeCreateTime}}</view>
+        </view>
+        <view class="num {{item.tradeNum < 0 ? 'num-1' : ''}}">
+          {{item.tradeNum>= 0 ? '+' : ''}}{{item.tradeNum}}
+        </view>
+      </view>
+      <view class="more" wx:if="{{page.total > list.length}}" bindtap="more">获取更多</view>
+      <!-- <view class="item">
+        <view class="detail">
+          <view class="title">会员签到</view>
+          <view class="time">2021.07.27 20:00:02</view>
+        </view>
+        <view class="num">+1</view>
+      </view>
+      <view class="item">
+        <view class="detail">
+          <view class="title">会员签到</view>
+          <view class="time">2021.07.27 20:00:02</view>
+        </view>
+        <view class="num num-1">+1</view>
+      </view> -->
+    </view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "选择组员",
+  "usingComponents": {
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-search": "@vant/weapp/search/index"
+  }
+}

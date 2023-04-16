@@ -1,0 +1,23 @@
+ .tagBox {
+  overflow: hidden;
+  margin-top: -20rpx;
+}
+ .tagBox .tag {
+  min-width: 25%;
+  display: inline-block;
+  margin-top: 20rpx;
+}
+ .tagBox .tag text {
+  margin-right: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #a6a6a6;
+  border-radius: 10rpx;
+  background: #eee;
+  display: block;
+}
+ .tagBox .on text {
+  color: #fff;
+  background: #ff8d1a;
+}

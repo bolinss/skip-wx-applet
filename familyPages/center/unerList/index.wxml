@@ -1,0 +1,37 @@
+<view class="page-wrap">
+  <view class="body">
+    <!-- 通过二维码扫描进来，选择Uner -->
+    <view class="group" wx:if="{{qrcodeContent}}">
+      <van-radio-group value="{{ selected }}" bind:change="onSelectChange">
+        <view class="item" wx:for="{{unerList}}" wx:key="sysUnerId">
+          <view class="txt">
+            <van-radio name="{{item.sysUnerId}}"></van-radio>
+            <text class="txt">{{item.name}}</text>
+          </view>
+          <!-- <view class="name" data-key="{{item.sysUnerId}}" bindtap="goDetail">
+            <van-icon class="icon" name="arrow" />
+          </view> -->
+        </view>
+      </van-radio-group>
+    </view>
+    <!-- 通过二维码扫描进来，选择Uner -->
+    <!-- 通过点击管理uner进来 -->
+    <view class="group" wx:else>
+      <view class="item" wx:for="{{unerList}}" wx:key="sysUnerId" data-key="{{item.sysUnerId}}" bindtap="goDetail">
+        <view class="txt">
+          <text class="txt">{{item.name}}</text>
+        </view>
+        <view class="name">
+          <van-icon class="icon" name="arrow" />
+        </view>
+      </view>
+    </view>
+    <!-- 通过点击管理uner进来 -->
+  </view>
+  <view class="btn-wrap">
+    <van-button wx:if="{{qrcodeContent}}" class="btn-save" type="info" bindtap="submit">
+      保存
+    </van-button>
+    <van-button type="{{qrcodeContent ? 'text' : 'info'}}" bindtap="goDetail">添加</van-button>
+  </view>
+</view>

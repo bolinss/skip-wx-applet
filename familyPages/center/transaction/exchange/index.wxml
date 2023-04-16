@@ -1,0 +1,16 @@
+<view class="page-wrap">
+  <view class="title">选择兑换积分(账户目前剩余{{surplusCalorie}}卡路里)</view>
+  <view class="tabs">
+    <view class="tab {{activeTab === item.exchangeSysId ? 'active' : ''}}" wx:for="{{list}}" wx:key="exchangeSysId" data-id="{{item.exchangeSysId}}" bindtap="tabChange">
+      <view class="text">兑换{{item.convertIntegral}}积分</view>
+      <view class="num">{{item.requiredCalorie}}卡路里</view>
+    </view>
+  </view>
+  <view class="btn-wrap">
+    <van-button type="info" bindtap="submit">确认兑换</van-button>
+  </view>
+  <view class="promet">
+    <text class="label">提示：</text>
+    <text class="content">积分一旦兑换无法修改</text>
+  </view>
+</view>

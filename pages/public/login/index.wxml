@@ -1,0 +1,14 @@
+<view class="login">
+  <image src="../../../static/public/images/logo.png" mode="widthFix" class="logo"></image>
+  <view class="btnBox">
+    <!-- <view class="btn">登录/注册</view>
+    <view class="btn btn2">微信手机号快捷登录</view> -->
+    <button class="btn btn2" bindtap="onLogin">登录/注册</button>
+  </view>
+  <view class="agreementText">
+    <van-checkbox value="{{ checked }}" bind:change="onChange" icon-size="32rpx"></van-checkbox>
+    <view class="textBox">
+      <text bindtap="onTextClick">已阅读并同意</text> <text class="link" bindtap="goReadAgreement">《UN智能跳绳用户注册协议》、</text><text class="link" bindtap="goReadAgreement">《UN智能跳绳隐私政策》</text>。
+    </view>
+  </view>
+</view>

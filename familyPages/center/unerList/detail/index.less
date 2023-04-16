@@ -1,0 +1,30 @@
+/**index.wxss**/
+page {
+  height: 100%;
+  .page-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .form-wrap {
+      flex: 1;
+    }
+    .btn-wrap {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 64rpx;
+      width: 100%;
+      .btn-cancel {
+        margin-right: 48rpx;
+        .van-button {
+          background: #e2e2e2;
+        }
+      }
+      .van-button {
+        width: 220rpx;
+        height: 80rpx;
+        border-radius: 44rpx;
+      }
+    }
+  }
+}

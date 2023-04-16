@@ -1,0 +1,66 @@
+<view class="page-wrap">
+  <view class="address-wrapper">
+    <view class="header">
+      <view class="userinfo">
+        <view class="name">{{detail.receiverName}}</view>
+        <view class="phone">{{detail.receiverPhone}}</view>
+      </view>
+      <view class="handle" bindtap="goAddress" wx:if="{{detail.status === 'WAIT_PAY' || detail.status === 'WAIT_DELIVERY'}}">
+        修改
+        <van-icon name="arrow" />
+      </view>
+    </view>
+    <view class="address">
+      {{detail.receiverProvince}} {{detail.receiverRegion}} {{detail.receiverCity}} {{detail.receiverDetailAddress}}
+    </view>
+  </view>
+  <view class="produce-detail">
+    <image class="img" src="{{detail.productPictureLink}}"></image>
+    <view class="info">
+      <view class="title">
+        <text>{{detail.productTitle}}</text>
+      </view>
+      <view class="price-info">
+        <view class="price">
+          <text class="money">{{detail.payIntegration}}</text>
+          <text class="unit">积分</text>
+          <text class="plus">+</text>
+          <text class="money">{{detail.payAmount}}</text>
+          <text class="unit">元</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="price-info">
+    <view class="price-info-item">
+      <view class="label">总额</view>
+      <view class="value">￥{{detail.totalAmount}}</view>
+    </view>
+    <!-- <view class="price-info-item">
+      <view class="label">运费</view>
+      <view class="value">￥19.9</view>
+    </view> -->
+    <view class="price-info-item">
+      <view class="label">积分抵扣</view>
+      <view class="value point">{{detail.payIntegration}}</view>
+    </view>
+    <view class="price-info-total">
+      <view class="value">应付：￥{{detail.payAmount}}</view>
+    </view>
+  </view>
+  <view class="pay-type">
+    <view class="title">支付方式</view>
+    <view class="pay-type-item">
+      <image class="img" src="./images/wx.png"></image>
+      <view class="name">微信钱包</view>
+      <!-- <van-checkbox value="{{ checked }}" bind:change="onChange"></van-checkbox> -->
+    </view>
+  </view>
+  <view class="submit">
+    <view class="total">
+      <view class="label">合计</view>
+      <view class="value">￥{{detail.payAmount}}</view>
+    </view>
+    <van-button type="info" bindtap="pay">确认支付</van-button>
+  </view>
+</view>

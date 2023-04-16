@@ -1,0 +1,36 @@
+page {
+  padding-bottom: 150rpx;
+}
+.content {
+  margin-top: 20rpx;
+  background: #fff;
+}
+.content .line {
+  display: flex;
+  font-size: 30rpx;
+  color: #333;
+  height: 112rpx;
+  align-items: center;
+  padding: 0 24rpx;
+  border-bottom: 1px solid #eee;
+}
+.content .line .name {
+  flex: 1;
+}
+.content .line .btn {
+  font-size: 30rpx;
+  color: #bbb;
+}
+.content .line:last-child {
+  border-bottom: 0;
+}
+.noData .text {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+}
+.df_btn {
+  position: fixed;
+  bottom: 48rpx;
+  left: 5%;
+  margin: 0;
+}

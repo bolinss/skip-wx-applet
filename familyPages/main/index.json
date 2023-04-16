@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "家长端首页",
+  "usingComponents": {
+    "tabbar": "../../../components/public/tabbar/tabbar",
+    "home": "../../../components/family/home/index",
+    "train": "../../../components/family/train/index",
+    "mine": "../../../components/family/mine/index",
+    "mall": "../../../components/family/mall/index"
+  }
+}

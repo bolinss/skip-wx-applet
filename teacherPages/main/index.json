@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "教师端首页",
+  "usingComponents": {
+    "tabbar":"../../components/public/tabbar/tabbar",
+    "home":"../../components/teacher/home/index",
+    "tools":"../../components/teacher/tools/index",
+    "mine":"../../components/teacher/mine/index"
+  }
+}

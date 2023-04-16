@@ -1,0 +1,14 @@
+<view>
+	<van-tabbar active="{{ active }}" bind:change="tabChange" active-color="#498CFF" inactive-color="#999">
+		<van-tabbar-item wx:for="{{tabbarData}}" wx:key="name" wx:for-index="index" bindtap="goPage" data-opt="{{item}}">
+			<view wx:if="{{item.name}}">
+				<image src="{{item.select_icon}}" style="width:44rpx;height:44rpx;" wx:if="{{active == index}}" />
+				<image src="{{item.icon}}" style="width:44rpx;height:44rpx;" wx:else />
+				<view>{{item.name}}</view>
+			</view>
+      <view wx:else>
+        <image src="{{item.icon}}" style="width:80rpx;height:80rpx;" />
+      </view>
+		</van-tabbar-item>
+	</van-tabbar>
+</view>

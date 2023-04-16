@@ -1,0 +1,11 @@
+<view class="temp">
+  <view class="content" wx:if="{{studentsData && studentsData.length != 0}}">
+    <view class="line" wx:for="{{studentsData}}" wx:key="sysUnerId">
+      <image src="{{item.avatarUrl?item.avatarUrl:'../../static/public/images/default_uner1.png'}}" style="width:80rpx;height:80rpx;" class="head"></image>
+      <view class="name">{{item.name}}</view>
+      <view class="bindBtn {{item.bindDevice?'c_red':'c_blue'}}" bindtap="changeBind" data-index="{{index}}" data-opt="{{item}}">{{item.bindDevice?'取消绑定':'绑定临时设备'}}</view>
+      <van-icon name="arrow" style="color:#bbb;margin-left:10rpx;" />
+    </view>
+  </view>
+  <view wx:else class="noData">暂无数据</view>
+</view>

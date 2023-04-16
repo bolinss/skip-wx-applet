@@ -1,0 +1,33 @@
+.classCode .className {
+  font-size: 30rpx;
+  text-align: center;
+  color: #333;
+  margin-top: 80rpx;
+}
+.classCode .codeImg {
+  width: 440rpx;
+  height: 440rpx;
+  border: 4px solid #333;
+  margin: 40rpx auto;
+}
+.classCode .codeImg image {
+  width: 100%;
+  height: 100%;
+}
+.classCode .df_btn {
+  bottom: 240rpx;
+}
+.classCode .textbox {
+  padding: 0 60rpx;
+  position: fixed;
+  bottom: 50rpx;
+  left: 0;
+}
+.classCode .textbox .title {
+  font-size: 36rpx;
+}
+.classCode .textbox .text {
+  font-size: 32rpx;
+  color: #666;
+  margin-top: 20rpx;
+}
